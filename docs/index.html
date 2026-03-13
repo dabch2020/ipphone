@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IP Phone</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+                   system-ui, -apple-system, sans-serif;
+      background: #f0f2f5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0d47a1 0%, #01579b 50%, #006064 100%);
+      color: #fff;
+      padding: 32px 24px 22px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,.2);
+    }
+    header h1 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      display: inline;
+    }
+    .header-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+    .btn-refresh {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 18px;
+      font-size: .85rem;
+      font-weight: 600;
+      color: #0d47a1;
+      background: #fff;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background .2s, transform .15s;
+      box-shadow: 0 2px 6px rgba(0,0,0,.15);
+      white-space: nowrap;
+    }
+    .btn-refresh:hover { background: #e3f2fd; }
+    .btn-refresh:active { transform: scale(.95); }
+    .btn-refresh .icon {
+      display: inline-block;
+      transition: transform .4s;
+    }
+    .btn-refresh.loading {
+      pointer-events: none;
+      opacity: .7;
+    }
+    .btn-refresh.loading .icon {
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    header .subtitle {
+      margin-top: 8px;
+      font-size: .85rem;
+      opacity: .85;
+    }
+
+    .sources {
+      background: #fff;
+      padding: 14px 24px;
+      text-align: center;
+      box-shadow: 0 1px 4px rgba(0,0,0,.06);
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .sources .label {
+      font-size: .8rem;
+      color: #888;
+      margin-right: 8px;
+    }
+    .src-tag {
+      display: inline-block;
+      font-size: .75rem;
+      padding: 3px 10px;
+      margin: 3px 4px;
+      border-radius: 14px;
+      background: #e3f2fd;
+      color: #1565c0;
+      text-decoration: none;
+      transition: background .15s;
+    }
+    .src-tag:hover { background: #bbdefb; }
+
+    .container {
+      max-width: 860px;
+      margin: 24px auto;
+      padding: 0 16px;
+    }
+    .stats {
+      text-align: center;
+      font-size: .82rem;
+      color: #999;
+      margin-bottom: 16px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-bottom: 14px;
+      box-shadow: 0 1px 4px rgba(0,0,0,.06);
+      transition: transform .18s, box-shadow .18s;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(0,0,0,.1);
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .badge {
+      display: inline-block;
+      font-size: .73rem;
+      font-weight: 600;
+      padding: 2px 10px;
+      border-radius: 12px;
+    }
+    .meta {
+      font-size: .76rem;
+      color: #999;
+    }
+    .card-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .card-title a {
+      color: #222;
+      text-decoration: none;
+    }
+    .card-title a:hover {
+      color: #0d47a1;
+      text-decoration: underline;
+    }
+    .card-summary {
+      font-size: .9rem;
+      color: #555;
+    }
+    .brand-tags {
+      margin-top: 10px;
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .brand-tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+
+    .empty {
+      text-align: center;
+      padding: 60px 20px;
+      color: #aaa;
+      font-size: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px 16px;
+      font-size: .78rem;
+      color: #aaa;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.4rem; }
+      .card { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-row">
+      <h1>📞 IP Phone</h1>
+      <button class="btn-refresh" id="btnRefresh">
+        <span class="icon">&#x21bb;</span> 刷新
+      </button>
+    </div>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-03-13 13:07（每6小时自动刷新）</p>
+  </header>
+
+  <div class="sources">
+    <span class="label">数据来源：</span>
+    <a href="https://www.nojitter.com" target="_blank" rel="noopener" class="src-tag">No Jitter</a> <a href="https://www.uctoday.com" target="_blank" rel="noopener" class="src-tag">UC Today</a> <a href="https://www.techtarget.com/searchunifiedcommunications" target="_blank" rel="noopener" class="src-tag">TechTarget UC</a> <a href="https://telecomreseller.com" target="_blank" rel="noopener" class="src-tag">Telecom Reseller</a> <a href="https://www.reddit.com/r/VOIP" target="_blank" rel="noopener" class="src-tag">Reddit r/VOIP</a> <a href="https://www.voip-info.org" target="_blank" rel="noopener" class="src-tag">VoIP Info</a>
+  </div>
+
+  <main class="container">
+    <p class="stats">共聚合 10 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#e8f5e9;color:#2e7d32">企业</span>
+        <span class="meta">TechTarget UC · Mon, 16 Mar 2026 00:00:00 GMT</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.techtarget.com/searchitoperations/tip/Target-tangible-IT-goals-during-a-DevOps-culture-shift" target="_blank" rel="noopener">Building a strong DevOps culture: A guide for business leaders</a></h3>
+      <p class="card-summary">&lt;p&gt;DevOps success depends, in part, on implementing the right technical tools and processes.&lt;/p&gt; &lt;p&gt;But equally essential is an effective DevOps culture within the organization -- one that celebrates core DevOps values, such as collaboration and &lt;a href=&quot;https://www.techtarget.com/searchitoperations/definition/IT-automation&quot;&gt;automation&lt;/a&gt;. It&#x27;s only by baking DevOps culture into the way stakehold…</p>
+      
+    </article>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-03-12T17:42:01+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1rrxk42/fusionpbx_inbound_routes_configation/" target="_blank" rel="noopener">FusionPBX Inbound Routes Configation</a></h3>
+      <p class="card-summary">Hey! I have two PBXs - Fusion PBX and FreePBX. I need to be able to call between them though SIP Trunk (Gateway). They are connected through Wireguard VPN. We need to call to a numbers in range of extensions (0000 to 9999). I can`t understand how to configure Inbound routes on FusionPBX side. If I create a Destination and put number 6666 to a destination field and action transfer 6666 XML domain.n…</p>
+      
+    </article>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#e3f2fd;color:#1565c0">UC</span>
+        <span class="meta">UC Today · Thu, 12 Mar 2026 12:09:54 +0000</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.uctoday.com/unified-communications/salesforce-agentforce-contact-center/" target="_blank" rel="noopener">Enterprise Connect 2026: Salesforce Launches Agentforce Contact Center In Bold AI-First Move</a></h3>
+      <p class="card-summary">Salesforce has formally entered a new phase of the contact centre market with the launch of Salesforce Agentforce Contact Center, positioning the platform as a CRM-native contact centre that unifies voice, digital channels, AI agents, and customer data within a single system. Announced during Enterprise Connect 2026, the new platform represents a significant move by […]</p>
+      
+    </article>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#e3f2fd;color:#1565c0">UC</span>
+        <span class="meta">UC Today · Thu, 12 Mar 2026 11:39:05 +0000</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.uctoday.com/unified-communications/enterprise-connect-2026-mitel-doubles-down-on-hybrid-with-edge-architecture-and-new-workforce-app/" target="_blank" rel="noopener">Enterprise Connect 2026: Mitel Doubles Down on Hybrid with Edge Architecture and New Workforce App</a></h3>
+      <p class="card-summary">At a show dominated by AI agents and cloud-native everything, Mitel arrived at Enterprise Connect 2026 with a deliberately different message. The future of enterprise communications isn’t solely in the cloud, and a significant chunk of the market has been waiting for someone to say it out loud. The company unveiled two products in Las […]</p>
+      <div class="brand-tags"><span class="brand-tag" style="background:#e3f2fd;color:#01579b">Mitel</span></div>
+    </article>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#e3f2fd;color:#1565c0">UC</span>
+        <span class="meta">UC Today · Wed, 11 Mar 2026 11:57:12 +0000</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.uctoday.com/unified-communications/enterprise-connect-2026-ringcentral-unveils-air-pro-to-bring-voice-agents-to-its-ccaas/" target="_blank" rel="noopener">Enterprise Connect 2026: RingCentral Unveils AIR Pro to Bring Voice Agents to Its CCaaS</a></h3>
+      <p class="card-summary">RingCentral has announced the launch of AIR Pro at Enterprise Connect 2026, a new voice-first AI agent platform designed to automate customer interactions across voice, SMS, chat, and digital channels. Embedded directly into RingCentral’s existing communications and contact center ecosystem, AIR Pro enables AI agents to do a range of customer service tasks autonomously. “AIR […]</p>
+      
+    </article>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-03-11T07:41:11+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1rqnd73/gsm_to_sip_gateway_hw/" target="_blank" rel="noopener">GSM to SIP Gateway - HW</a></h3>
+      <p class="card-summary">Hi, I&#x27;m quite new to VoIP, sorry if I ask simple question, but I can&#x27;t find easy answear still. Form my solution as I understood I would need GSM to SIP Gateway, can you advise setup and exact model of device to buy? (I don&#x27;t want to build device by myself, I&#x27;m looking for device to buy if exist solid solution without glitches) I have SIM card (work mobile number), which I want to install on some …</p>
+      
+    </article>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-03-11T04:07:12+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1rqjmdz/practicing_analyzing_packet_captures/" target="_blank" rel="noopener">Practicing analyzing packet captures</a></h3>
+      <p class="card-summary">Hi everyone I&#x27;m studying VoIP troubleshooting and preparing for a technical interview. Does anyone have sample PCAP files containing SIP/RTP call flows (call setup, jitter issues, one-way audio, or failed registrations) that I could analyze in Wireshark? Lab captures or sanitized data are totally fine. I’m mainly trying to practice identifying: • SIP call setup (INVITE, TRYING, RINGING, OK) • RTP …</p>
+      
+    </article>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#e3f2fd;color:#1565c0">UC</span>
+        <span class="meta">No Jitter · Tue, 10 Mar 2026 20:34:20 GMT</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.nojitter.com/contact-centers/amazon-connect-four-features-smooth-contact-center-operations" target="_blank" rel="noopener">Amazon Connect: 4 features smooth contact center operations</a></h3>
+      <p class="card-summary">From personalization to testing, Connect provides a unified platform data layer on which to build customer journeys.</p>
+      
+    </article>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#e3f2fd;color:#1565c0">UC</span>
+        <span class="meta">No Jitter · Tue, 10 Mar 2026 15:10:02 GMT</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.nojitter.com/ai-automation/salesforce-launches-agentforce-contact-center" target="_blank" rel="noopener">Salesforce launches Agentforce Contact Center</a></h3>
+      <p class="card-summary">The native CCaaS solution offers a single data source for customer information and an application that unifies AI, channels and CRM.</p>
+      
+    </article>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-03-01T00:01:42+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1rhi6v3/monthly_requests_thread/" target="_blank" rel="noopener">Monthly Requests Thread</a></h3>
+      <p class="card-summary">Looking for a VoIP solution but don&#x27;t know where to start? Ask here! Please not that standalone advertisements are not permitted. All top-level comments must be requests for a product or service. Absolutely no soliciting. Do not ask anyone to DM you, or DM others for any reason. If you want someone to use your services, post a link to your website. This post will be replaced by a new one at 00:00 …</p>
+      
+    </article>
+  </main>
+
+  <footer>
+    IP Phone 信息聚合 &copy; 2026
+  </footer>
+
+  <script>
+  var DISPATCH_TOKEN = '';
+  var REPO = 'dabch2020/ipphone';
+  var btn = document.querySelector('.btn-refresh');
+  var subtitleSpan = document.querySelector('.subtitle');
+
+  btn.onclick = function() {
+    btn.classList.add('loading');
+    subtitleSpan.textContent = '已触发更新，正在等待构建完成…';
+
+    // 尝试通过 repository_dispatch 触发 GitHub Actions
+    if (DISPATCH_TOKEN) {
+      fetch('https://api.github.com/repos/' + REPO + '/dispatches', {
+        method: 'POST',
+        headers: {
+          'Authorization': 'Bearer ' + DISPATCH_TOKEN,
+          'Accept': 'application/vnd.github.v3+json'
+        },
+        body: JSON.stringify({ event_type: 'refresh' })
+      })
+      .then(function(r) {
+        if (r.status === 204 || r.status === 200) {
+          subtitleSpan.textContent = '✅ 已触发更新，正在等待构建完成…';
+          pollForUpdate();
+        } else {
+          subtitleSpan.textContent = '❌ 触发失败 (HTTP ' + r.status + ')';
+          btn.classList.remove('loading');
+        }
+      })
+      .catch(function(e) {
+        subtitleSpan.textContent = '❌ 网络错误，请稍后重试';
+        btn.classList.remove('loading');
+      });
+    } else {
+      // 无 token 时直接刷新页面
+      subtitleSpan.textContent = '正在刷新页面…';
+      setTimeout(function() { location.reload(); }, 1500);
+    }
+  };
+
+  function pollForUpdate() {
+    var originalTime = '2026-03-13 13:07';
+    var attempts = 0;
+    var maxAttempts = 24;
+    var timer = setInterval(function() {
+      attempts++;
+      fetch(location.href.split('?')[0] + '?_t=' + Date.now())
+        .then(function(r) { return r.text(); })
+        .then(function(html) {
+          var m = html.match(/最后更新：([^（]+)/);
+          if (m && m[1].trim() !== originalTime) {
+            clearInterval(timer);
+            location.reload();
+          } else if (attempts >= maxAttempts) {
+            clearInterval(timer);
+            subtitleSpan.textContent = '✅ 构建已触发，请稍后手动刷新页面';
+            btn.classList.remove('loading');
+          }
+        })
+        .catch(function() {});
+    }, 5000);
+  }
+  </script>
+
+</body>
+</html>
