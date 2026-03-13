@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IP Phone 信息聚合</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📞</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+:root {
+  --bg-primary: #0a0e17;
+  --bg-secondary: #111827;
+  --bg-card: #1a2332;
+  --bg-card-hover: #1f2b3d;
+  --border: #2a3a50;
+  --text-primary: #e8edf5;
+  --text-secondary: #8899b0;
+  --text-muted: #5a6a80;
+  --accent: #f0a828;
+  --accent-dim: rgba(240,168,40,0.15);
+  --accent-glow: rgba(240,168,40,0.3);
+  --brand-cisco: #049fd9;
+  --brand-poly: #6b21a8;
+  --brand-avaya: #da291c;
+  --brand-teams: #6264a7;
+  --brand-yealink: #1a8c37;
+  --brand-mitel: #003b71;
+  --success: #34d399;
+  --radius: 8px;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* Subtle grid background */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(rgba(240,168,40,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(240,168,40,0.02) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== HEADER ===== */
+header {
+  padding: 40px 0 24px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+
+.header-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, var(--accent), #e08800);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 4px 20px var(--accent-glow);
+}
+
+h1 {
+  font-family: 'Space Mono', monospace;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, var(--text-primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1 span {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  -webkit-text-fill-color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.refresh-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: var(--accent-dim);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.refresh-btn:hover {
+  background: var(--accent-glow);
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+.refresh-btn .arrow {
+  display: inline-block;
+  font-size: 18px;
+  transition: transform 0.6s ease;
+}
+
+.refresh-btn.spinning .arrow {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.refresh-status {
+  font-size: 12px;
+  color: var(--accent);
+  margin-top: 6px;
+  min-height: 18px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: right;
+}
+
+.refresh-status.visible {
+  opacity: 1;
+}
+
+.update-time {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 12px;
+  font-family: 'Space Mono', monospace;
+}
+
+/* ===== STATS BAR ===== */
+.stats-bar {
+  display: flex;
+  gap: 24px;
+  padding: 16px 0;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.stat-item .num {
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 18px;
+}
+
+/* ===== FILTER TABS ===== */
+.filters {
+  display: flex;
+  gap: 8px;
+  padding: 20px 0;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--border);
+}
+
+.filter-btn {
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-secondary);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.filter-btn:hover {
+  border-color: var(--text-secondary);
+  color: var(--text-primary);
+}
+
+.filter-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg-primary);
+  font-weight: 600;
+}
+
+.filter-btn .count {
+  display: inline-block;
+  margin-left: 4px;
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+/* Brand-specific colors for active state */
+.filter-btn[data-brand="Cisco"].active { background: var(--brand-cisco); border-color: var(--brand-cisco); }
+.filter-btn[data-brand="Poly"].active,
+.filter-btn[data-brand="Polycom"].active { background: var(--brand-poly); border-color: var(--brand-poly); color: #fff; }
+.filter-btn[data-brand="Avaya"].active { background: var(--brand-avaya); border-color: var(--brand-avaya); color: #fff; }
+.filter-btn[data-brand="Microsoft Teams"].active { background: var(--brand-teams); border-color: var(--brand-teams); color: #fff; }
+.filter-btn[data-brand="Yealink"].active { background: var(--brand-yealink); border-color: var(--brand-yealink); color: #fff; }
+.filter-btn[data-brand="Mitel"].active { background: var(--brand-mitel); border-color: var(--brand-mitel); color: #fff; }
+
+/* ===== NEWS GRID ===== */
+.news-grid {
+  display: grid;
+  gap: 16px;
+  padding: 24px 0 60px;
+}
+
+.news-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.news-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--accent);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.news-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+
+.news-card:hover::before {
+  opacity: 1;
+}
+
+.card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.card-source {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg-primary);
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.card-date {
+  font-family: 'Space Mono', monospace;
+  font-size: 11px;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.card-summary {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-brands {
+  display: flex;
+  gap: 6px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.brand-tag {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.brand-tag[data-brand="Cisco"] { background: rgba(4,159,217,0.15); color: var(--brand-cisco); }
+.brand-tag[data-brand="Poly"],
+.brand-tag[data-brand="Polycom"] { background: rgba(107,33,168,0.15); color: #a855f7; }
+.brand-tag[data-brand="Avaya"] { background: rgba(218,41,28,0.15); color: #f87171; }
+.brand-tag[data-brand="Microsoft Teams"] { background: rgba(98,100,167,0.15); color: #818cf8; }
+.brand-tag[data-brand="Yealink"] { background: rgba(26,140,55,0.15); color: var(--success); }
+.brand-tag[data-brand="Mitel"] { background: rgba(0,59,113,0.15); color: #60a5fa; }
+
+/* ===== LOADING ===== */
+.loading {
+  text-align: center;
+  padding: 80px 0;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto 16px;
+}
+
+.loading-text {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+/* ===== EMPTY STATE ===== */
+.empty-state {
+  text-align: center;
+  padding: 80px 0;
+  color: var(--text-muted);
+}
+
+.empty-state .icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 24px 0;
+  text-align: center;
+}
+
+.source-list {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.source-link {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.source-link:hover {
+  color: var(--accent);
+}
+
+.footer-note {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-family: 'Space Mono', monospace;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .container { padding: 0 16px; }
+  h1 { font-size: 22px; }
+  .header-top { flex-direction: column; }
+  .refresh-status { text-align: left; }
+  .stats-bar { gap: 16px; }
+  .news-card { padding: 16px; }
+  .card-header { flex-direction: column; gap: 8px; }
+}
+
+/* ===== ANIMATION ===== */
+.news-card {
+  animation: fadeInUp 0.4s ease both;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.news-card:nth-child(1) { animation-delay: 0.02s; }
+.news-card:nth-child(2) { animation-delay: 0.04s; }
+.news-card:nth-child(3) { animation-delay: 0.06s; }
+.news-card:nth-child(4) { animation-delay: 0.08s; }
+.news-card:nth-child(5) { animation-delay: 0.10s; }
+.news-card:nth-child(6) { animation-delay: 0.12s; }
+.news-card:nth-child(7) { animation-delay: 0.14s; }
+.news-card:nth-child(8) { animation-delay: 0.16s; }
+.news-card:nth-child(9) { animation-delay: 0.18s; }
+.news-card:nth-child(10) { animation-delay: 0.20s; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="header-top">
+      <div class="logo-area">
+        <div class="logo-icon">📞</div>
+        <div>
+          <h1>IP Phone Intel<span>Information Aggregator</span></h1>
+        </div>
+      </div>
+      <div style="text-align:right;">
+        <div class="header-actions">
+          <button class="refresh-btn" id="refreshBtn" onclick="handleRefresh()">
+            <span class="arrow">↻</span> 刷新
+          </button>
+        </div>
+        <div class="refresh-status" id="refreshStatus"></div>
+      </div>
+    </div>
+    <div class="update-time" id="updateTime">加载中...</div>
+    <div class="stats-bar" id="statsBar"></div>
+  </header>
+
+  <div class="filters" id="filters"></div>
+
+  <div class="news-grid" id="newsGrid">
+    <div class="loading">
+      <div class="loading-spinner"></div>
+      <div class="loading-text">正在加载新闻数据...</div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="source-list" id="sourceList"></div>
+    <div class="footer-note">IP Phone Intel · Powered by GitHub Actions · Auto-updated</div>
+  </footer>
+</div>
+
+<script>
+let allEntries = [];
+let currentFilter = 'all';
+
+const DATA_URL = 'data.json';
+
+const SOURCE_URLS = {
+  'No Jitter': 'https://www.nojitter.com',
+  'UC Today': 'https://www.uctoday.com',
+  'TechTarget UC': 'https://www.techtarget.com/searchunifiedcommunications',
+  'Telecom Reseller': 'https://telecomreseller.com',
+  'Reddit r/VOIP': 'https://www.reddit.com/r/VOIP',
+  'VoIP Info': 'https://www.voip-info.org',
+};
+
+async function loadData() {
+  try {
+    const resp = await fetch(DATA_URL + '?t=' + Date.now());
+    if (!resp.ok) throw new Error('Failed to fetch');
+    const data = await resp.json();
+    allEntries = data.entries || [];
+    renderUpdateTime(data.updated);
+    renderStats(data);
+    renderFilters(data);
+    renderSources(data.sources || []);
+    renderNews();
+  } catch (e) {
+    document.getElementById('newsGrid').innerHTML =
+      '<div class="empty-state"><div class="icon">📡</div>' +
+      '<p>暂无数据，请等待首次构建完成后刷新页面。</p></div>';
+    document.getElementById('updateTime').textContent = '数据尚未生成';
+  }
+}
+
+function renderUpdateTime(isoStr) {
+  if (!isoStr) return;
+  const d = new Date(isoStr);
+  const el = document.getElementById('updateTime');
+  el.textContent = '最后更新: ' + d.toLocaleString('zh-CN', {
+    year: 'numeric', month: '2-digit', day: '2-digit',
+    hour: '2-digit', minute: '2-digit', timeZoneName: 'short'
+  });
+}
+
+function renderStats(data) {
+  const bar = document.getElementById('statsBar');
+  const brandCounts = {};
+  (data.brands || []).forEach(b => brandCounts[b] = 0);
+  (data.entries || []).forEach(e => {
+    (e.brands || []).forEach(b => { if (b in brandCounts) brandCounts[b]++; });
+  });
+  const topBrands = Object.entries(brandCounts).sort((a,b) => b[1]-a[1]).slice(0, 3);
+  bar.innerHTML =
+    '<div class="stat-item"><span class="num">' + (data.total||0) + '</span> 条资讯</div>' +
+    '<div class="stat-item"><span class="num">' + (data.sources||[]).length + '</span> 个来源</div>' +
+    topBrands.filter(([,c]) => c > 0).map(([b, c]) => 
+      '<div class="stat-item"><span class="num">' + c + '</span> ' + b + '</div>'
+    ).join('');
+}
+
+function renderFilters(data) {
+  const container = document.getElementById('filters');
+  const brands = data.brands || [];
+  const counts = { all: (data.entries || []).length };
+  brands.forEach(b => counts[b] = 0);
+  (data.entries || []).forEach(e => {
+    (e.brands || []).forEach(b => { if (b in counts) counts[b]++; });
+  });
+
+  let html = '<button class="filter-btn active" data-brand="all" onclick="setFilter(\'all\', this)">全部 <span class="count">' + counts.all + '</span></button>';
+  brands.forEach(b => {
+    html += '<button class="filter-btn" data-brand="' + b + '" onclick="setFilter(\'' + b + '\', this)">' + b + ' <span class="count">' + (counts[b]||0) + '</span></button>';
+  });
+  container.innerHTML = html;
+}
+
+function setFilter(brand, el) {
+  currentFilter = brand;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  el.classList.add('active');
+  renderNews();
+}
+
+function renderNews() {
+  const grid = document.getElementById('newsGrid');
+  let entries = allEntries;
+  if (currentFilter !== 'all') {
+    entries = entries.filter(e => (e.brands || []).includes(currentFilter));
+  }
+
+  if (entries.length === 0) {
+    grid.innerHTML = '<div class="empty-state"><div class="icon">🔍</div><p>该分类暂无相关资讯</p></div>';
+    return;
+  }
+
+  grid.innerHTML = entries.map(entry => {
+    const date = entry.date ? new Date(entry.date).toLocaleDateString('zh-CN', { month: 'short', day: 'numeric' }) : '';
+    const brandTags = (entry.brands || []).map(b =>
+      '<span class="brand-tag" data-brand="' + b + '">' + b + '</span>'
+    ).join('');
+
+    return '<a class="news-card" href="' + escapeHtml(entry.link) + '" target="_blank" rel="noopener noreferrer">' +
+      '<div class="card-header">' +
+        '<div class="card-title">' + escapeHtml(entry.title) + '</div>' +
+        '<div class="card-meta">' +
+          '<span class="card-source">' + entry.icon + ' ' + escapeHtml(entry.source) + '</span>' +
+          (date ? '<span class="card-date">' + date + '</span>' : '') +
+        '</div>' +
+      '</div>' +
+      (entry.summary ? '<div class="card-summary">' + escapeHtml(entry.summary) + '</div>' : '') +
+      (brandTags ? '<div class="card-brands">' + brandTags + '</div>' : '') +
+    '</a>';
+  }).join('');
+}
+
+function escapeHtml(str) {
+  if (!str) return '';
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+function handleRefresh() {
+  const btn = document.getElementById('refreshBtn');
+  const status = document.getElementById('refreshStatus');
+
+  btn.classList.add('spinning');
+  status.textContent = '已触发更新，正在等待构建完成…';
+  status.classList.add('visible');
+
+  // Reload data after a short delay
+  setTimeout(async () => {
+    await loadData();
+    btn.classList.remove('spinning');
+    status.textContent = '数据已刷新 ✓';
+    setTimeout(() => {
+      status.classList.remove('visible');
+    }, 3000);
+  }, 1500);
+}
+
+function renderSources(sources) {
+  const el = document.getElementById('sourceList');
+  el.innerHTML = sources.map(s => {
+    const url = SOURCE_URLS[s] || '#';
+    return '<a class="source-link" href="' + url + '" target="_blank" rel="noopener noreferrer">' + s + '</a>';
+  }).join('');
+}
+
+// Load on page ready
+document.addEventListener('DOMContentLoaded', loadData);
+</script>
+
+</body>
+</html>
