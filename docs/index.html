@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-03-19 01:16（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-03-19 06:45（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -205,7 +205,16 @@
   </div>
 
   <main class="container">
-    <p class="stats">共聚合 9 条新闻</p>
+    <p class="stats">共聚合 10 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-03-19T01:41:40+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1rxn7nm/grandstream_ata_over_wireguard_vpn_to_netsapiens/" target="_blank" rel="noopener">Grandstream ATA over Wireguard VPN to Netsapiens PBX - Configuration Help?</a></h3>
+      <p class="card-summary">Good day folks, I hope you&#x27;re ready for #EdgeCaseWednesday- This one isn&#x27;t great, but I fear this is where the VoIP world may be headed more and more as primary internet lines get replaced with cheaper 5G. I have a remote client site with an analog (POTS) phone plugged into a Grandstream ATA that we can&#x27;t seem to get to route calls and/or not have silence on the calls from time to time. This setup…</p>
+      
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
@@ -334,7 +343,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-03-19 01:16';
+    var originalTime = '2026-03-19 06:45';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
