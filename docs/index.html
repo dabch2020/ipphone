@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-03-21 12:27（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-03-21 18:22（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -206,6 +206,24 @@
 
   <main class="container">
     <p class="stats">共聚合 10 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-03-21T16:30:27+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1rzvva9/paging_systems/" target="_blank" rel="noopener">Paging Systems</a></h3>
+      <p class="card-summary">Any good recommendations for a paging adaptor? I have an old overhead paging system and need to make it work with Verizon VOIP phones. submitted by /u/Josepha1268 [link] [comments]</p>
+      
+    </article>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-03-21T13:40:47+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1rzrril/remote_desk_phones_how_to_do/" target="_blank" rel="noopener">Remote Desk Phones ! How to do ?</a></h3>
+      <p class="card-summary">Hi guys , i am currently looking for a secure way to deploy remote desk phones (Cisco 8841) without per-user VPN hardwareand free of any subscription ? Current setup: - Yeastar S-Series PBX (on-prem) - 20 x Cisco 8841 all locally installed, Goal: Remote users take a desk phone home/office, plug it in, and: - register to PBX - call internal extensions - behave like LAN phones Constraints: - Avoid e…</p>
+      <div class="brand-tags"><span class="brand-tag" style="background:#e3f2fd;color:#049fd9">Cisco</span></div>
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#e3f2fd;color:#1565c0">UC</span>
@@ -250,24 +268,6 @@
       <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1ry1nxm/avaya_dtmf_issues/" target="_blank" rel="noopener">Avaya DTMF Issues</a></h3>
       <p class="card-summary">About two months ago, we began experiencing an issue with our PBX: incoming DTMF codes are not being detected by the auto-attendant. Internal and outbound calls function normally, and DTMF detection works correctly in those cases. We are working with Spectrum, as our PRI trunk is provided through them. Despite approximately two months of troubleshooting, including replacing the PRI card on the PBX…</p>
       <div class="brand-tags"><span class="brand-tag" style="background:#ffebee;color:#c62828">Avaya</span></div>
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-03-19T12:39:59+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1rxzbk2/gigaset_c530_logs/" target="_blank" rel="noopener">Gigaset C530 logs</a></h3>
-      <p class="card-summary">Hello, I have an old gigaset c530 dect station that doesn&#x27;t properly work, sometime it returns 403 when receiving a call but I don&#x27;t know why, I compared the packets between a working call and a bad one, but there is no difference between the two INVITE, so something must be messed-up inside the station. Does anyone know a trick to get some logs out of the web interface ? Thanks ! submitted by /u/…</p>
-      
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-03-19T01:41:40+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1rxn7nm/grandstream_ata_over_wireguard_vpn_to_netsapiens/" target="_blank" rel="noopener">Grandstream ATA over Wireguard VPN to Netsapiens PBX - Configuration Help?</a></h3>
-      <p class="card-summary">Good day folks, I hope you&#x27;re ready for #EdgeCaseWednesday- This one isn&#x27;t great, but I fear this is where the VoIP world may be headed more and more as primary internet lines get replaced with cheaper 5G. I have a remote client site with an analog (POTS) phone plugged into a Grandstream ATA that we can&#x27;t seem to get to route calls and/or not have silence on the calls from time to time. This setup…</p>
-      
     </article>
     <article class="card">
       <div class="card-header">
@@ -343,7 +343,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-03-21 12:27';
+    var originalTime = '2026-03-21 18:22';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
