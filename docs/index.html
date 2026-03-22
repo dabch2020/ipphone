@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-03-22 12:29（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-03-22 18:23（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -206,6 +206,24 @@
 
   <main class="container">
     <p class="stats">共聚合 9 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-03-22T18:22:51+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1s0t2zp/cellular_to_voip_bridge_for_text_voice_privacy/" target="_blank" rel="noopener">cellular to voip bridge for text + voice (privacy focused)</a></h3>
+      <p class="card-summary">I&#x27;d like to find a class of services or guides to self-hosting(?) on how to invisibly bridge text and voice from a real cellular connection (with a dedicated sim) to VOIP. This is a part of a larger privacy-related journey I am on. Since all hosted VOIP/MMS services fail for some use-cases (banking 2fa and services registration are common failure points) I&#x27;m thinking if I had a sim dedicated to me…</p>
+      
+    </article>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-03-22T15:52:20+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1s0p5rt/callcentric_voip_provider_saying_calls_are_not/" target="_blank" rel="noopener">Callcentric (voip provider) saying calls are not hitting network</a></h3>
+      <p class="card-summary">I have a spa112 that has been working for several years to give me a POTS line with callcentric as the provider. It worked until March 19th. The phone number rings busy now or says all circuits are busy. I rebooted the spa112 as well as disconnected the phone line leaving the spa and I get the same busy or all circuits are busy. I reached out to callcentric and they said they are able to call the …</p>
+      
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
@@ -226,15 +244,6 @@
     </article>
     <article class="card">
       <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-03-21T13:40:47+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1rzrril/remote_desk_phones_how_to_do/" target="_blank" rel="noopener">Remote Desk Phones ! How to do ?</a></h3>
-      <p class="card-summary">Hi guys , i am currently looking for a secure way to deploy remote desk phones (Cisco 8841) without per-user VPN hardwareand free of any subscription ? Current setup: - Yeastar S-Series PBX (on-prem) - 20 x Cisco 8841 all locally installed, Goal: Remote users take a desk phone home/office, plug it in, and: - register to PBX - call internal extensions - behave like LAN phones Constraints: - Avoid e…</p>
-      <div class="brand-tags"><span class="brand-tag" style="background:#e3f2fd;color:#049fd9">Cisco</span></div>
-    </article>
-    <article class="card">
-      <div class="card-header">
         <span class="badge" style="background:#e3f2fd;color:#1565c0">UC</span>
         <span class="meta">UC Today · Fri, 20 Mar 2026 09:15:14 +0000</span>
       </div>
@@ -249,15 +258,6 @@
       </div>
       <h3 class="card-title"><a href="https://www.uctoday.com/unified-communications/negotiating-ai-pricing-in-uc/" target="_blank" rel="noopener">You’re Probably Paying the AI Tax: Start Negotiating AI Pricing in UC and Collaboration Tools</a></h3>
       <p class="card-summary">Pretty much every UC and Collaboration vendor is now selling plans with “AI included”. That sounds like a good thing, until you realize how much it’s changing the price of software. If you’ve looked at recent renewals for Teams, Zoom, or Webex, you’ve already seen what’s happening. AI shows up inside the platform. Then it […]</p>
-      
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-03-20T05:34:51+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1rynvp2/asterisk_intercom_setup/" target="_blank" rel="noopener">Asterisk - Intercom setup</a></h3>
-      <p class="card-summary">Hi, First of all, I am a total noob in voip, please be kind and comprehensive :-) I am trying to setup Asterisk on my Synology NAS, in order to make my Hikvision intercom working fully locally. So I created the container using this compose.yaml : services: asterisk: image: mlan/asterisk:latest container_name: asterisk ports: - &quot;5060:5060/udp&quot; - &quot;10000-10100:10000-10100/udp&quot; volumes: - ./config:/et…</p>
       
     </article>
     <article class="card">
@@ -334,7 +334,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-03-22 12:29';
+    var originalTime = '2026-03-22 18:23';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
