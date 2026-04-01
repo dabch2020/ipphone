@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-04-01 12:55（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-04-01 18:45（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -205,7 +205,16 @@
   </div>
 
   <main class="container">
-    <p class="stats">共聚合 6 条新闻</p>
+    <p class="stats">共聚合 5 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-04-01T18:28:06+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1s9szks/sbc_voipswitch/" target="_blank" rel="noopener">SBC VOIPSWITCH</a></h3>
+      <p class="card-summary">Does anyone know VOIPSWITCH for Session Border Controllers? what is their reputation like? submitted by /u/Runsurge [link] [comments]</p>
+      
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#e3f2fd;color:#1565c0">UC</span>
@@ -240,24 +249,6 @@
       </div>
       <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1s8ul9e/call_forwarding_to_mobile_phones_freepbx/" target="_blank" rel="noopener">Call Forwarding to mobile phones (FreePBX)</a></h3>
       <p class="card-summary">submitted by /u/Dan_FoundationMSP [link] [comments]</p>
-      
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-03-31T11:27:29+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1s8kqn8/yealink_t77u/" target="_blank" rel="noopener">Yealink T77U</a></h3>
-      <p class="card-summary">The DSS keys are numbered and ordered differently on the home screen than when expanded. On the home screen it goes top to bottom 1-10. On the expanded view it goes left to right rather than keeping the format from the home screen confusing users trying to find the buttons they are looking for. Any way to change this? submitted by /u/loki2002 [link] [comments]</p>
-      <div class="brand-tags"><span class="brand-tag" style="background:#e8f5e9;color:#2e7d32">Yealink</span></div>
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-03-31T11:10:13+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1s8kez4/call_transfer_issues_after_stirshaken_tls_bria/" target="_blank" rel="noopener">Call transfer issues after STIR/SHAKEN + TLS (Bria Teams</a></h3>
-      <p class="card-summary">​ We recently ran into an issue after our VoIP provider implemented STIR/SHAKEN on their servers. As part of the changes, they instructed us to switch our softphone (Bria Teams) to use TLS. Since making that change, we’ve been experiencing problems specifically with call transfers: When transferring a call, there’s about 20–30 seconds of dead silence If we try to resume/unhold the call, the line s…</p>
       
     </article>
   </main>
@@ -307,7 +298,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-04-01 12:55';
+    var originalTime = '2026-04-01 18:45';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
