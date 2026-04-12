@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-04-12 01:28（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-04-12 07:03（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -205,7 +205,16 @@
   </div>
 
   <main class="container">
-    <p class="stats">共聚合 13 条新闻</p>
+    <p class="stats">共聚合 12 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-04-12T05:53:30+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1sj659e/successfully_wiped_verizon_firmware_yealink_t54w/" target="_blank" rel="noopener">Successfully wiped Verizon firmware yealink T54W</a></h3>
+      <p class="card-summary">After messing with it all day, I successfully got new firmware onto my T54W’s that had Verizon one talk on them. I got them to pull a provision from my 3CX setup, and when they each pulled their provision, it updated the firmware again. I’m assuming it updated to 3CX’s version. After doing so, the phones each say they don’t have an account registered, and 3CX gives an event code of 12291 each time…</p>
+      <div class="brand-tags"><span class="brand-tag" style="background:#e8f5e9;color:#2e7d32">Yealink</span></div>
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
@@ -231,24 +240,6 @@
       </div>
       <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1simqup/cannot_fully_reset_grandstream_ht802v2/" target="_blank" rel="noopener">Cannot fully reset Grandstream HT802v2</a></h3>
       <p class="card-summary">Hello! Been trying to get this to work with VoIP.ms, needed funds in account to test calling from port to port with them, got that down, TLS still won&#x27;t work on FW 1.0.9.3. When I first got this I updated from 1.0.5.3 or 4 to 1.0.7.5 but kept getting weird warnings that stuff wasn&#x27;t applied after changing settings or some need to reboot or else (red drop-down banner, I didn&#x27;t save the screenshot f…</p>
-      
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-04-11T07:20:30+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1sicb1l/yealink_t54w_help/" target="_blank" rel="noopener">Yealink T54W help</a></h3>
-      <p class="card-summary">I recently got 3 Yealink T54W’s that were once Verizon one talk phones. I did the self service RPS removal and the system replied saying the Mac’s were successfully removed. I’m still unable to provision them for 3CX as they still go back to Verizon despite it saying they were removed from the RPS. I’ve since tried to use the recovery files. I downloaded the recovery files, made sure the usb drive…</p>
-      <div class="brand-tags"><span class="brand-tag" style="background:#e8f5e9;color:#2e7d32">Yealink</span></div>
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-04-11T06:14:08+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1sib549/anyone_using_weave_voip_in_a_clinic_ontario_phipa/" target="_blank" rel="noopener">Anyone using Weave VoIP in a clinic (Ontario, PHIPA compliance)?</a></h3>
-      <p class="card-summary">Hi everyone, I’m currently evaluating how Weave performs as a VoIP system in real-world clinic environments, particularly in Canada. I run a small healthcare clinic in Ontario (3 doctors + 4 staff), and I’m reviewing different phone systems to understand whether they are suitable for clinical use. I’m specifically trying to understand the following from anyone with hands-on experience: How is the …</p>
       
     </article>
     <article class="card">
@@ -370,7 +361,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-04-12 01:28';
+    var originalTime = '2026-04-12 07:03';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
