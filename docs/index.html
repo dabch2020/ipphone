@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-04-18 06:56（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-04-18 12:38（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -206,6 +206,15 @@
 
   <main class="container">
     <p class="stats">共聚合 6 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-04-18T12:01:15+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1sovrcl/how_does_caller_id_spoofing_still_happen_in_voip/" target="_blank" rel="noopener">How does caller ID spoofing still happen in VoIP setups?</a></h3>
+      <p class="card-summary">I have been experimenting a bit with VoIP setups recently and trying to understand how caller ID is actually handled end-to-end. One thing that surprised me is that spoof call and spoof SMS functionality still seems to be possible through certain platforms. I always assumed providers would strictly validate outbound caller ID by now, especially with all the spam and fraud concerns. While looking i…</p>
+      
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
@@ -249,15 +258,6 @@
       </div>
       <h3 class="card-title"><a href="https://www.uctoday.com/devices-workspace-tech/hidden-workspace-device-costs-lifecycle-budget/" target="_blank" rel="noopener">Are Hidden Device Costs Destroying Your Workspace Budget?</a></h3>
       <p class="card-summary">Yes, they can. Most enterprises underestimate device spend because they price hardware, not ownership. Once you factor in the workspace tech lifecycle, the math changes fast. A “simple” video bar rollout triggers enterprise AV maintenance, firmware work, security patching, replacement parts, spares, and support tickets. Then comes the collaboration hardware refresh cycle, which often lands […]</p>
-      
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-04-16T14:30:50+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1sn588o/voicemail_to_email_issues_with_o365/" target="_blank" rel="noopener">Voicemail to Email Issues with O365</a></h3>
-      <p class="card-summary">We use Intermedia as a VoIP provider and there has been a somewhat silent outage for the past week of voicemail to email notifications not working that has only come to light as more complaints trickle in. The issue seems to be only affecting these emails going to O365. Just curious if any other platforms have been having similar issues or if this is something hyper specific to Intermedia to O365.…</p>
       
     </article>
   </main>
@@ -307,7 +307,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-04-18 06:56';
+    var originalTime = '2026-04-18 12:38';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
