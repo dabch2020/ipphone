@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-04-23 01:45（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-04-23 07:22（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -206,6 +206,15 @@
 
   <main class="container">
     <p class="stats">共聚合 6 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-04-23T06:03:01+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1staag7/delay_in_hangup_signal_from_ui_to_asterisk/" target="_blank" rel="noopener">Delay in Hangup Signal from UI to Asterisk Causing Incorrect Call Recording Duration</a></h3>
+      <p class="card-summary">Hi everyone, I’m facing an issue in my VoIP application where there is a noticeable delay in the hangup signal being sent from the UI to Asterisk. Because of this delay, the call recording duration ends up being longer than the actual call duration. For example, when a user ends the call from the UI, Asterisk receives the hangup signal a few seconds late, and the recording continues until that sig…</p>
+      
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
@@ -240,15 +249,6 @@
       </div>
       <h3 class="card-title"><a href="https://www.nojitter.com/infrastructure/ai-and-integration-are-shaping-ucaas-market" target="_blank" rel="noopener">AI and integration are shaping UCaaS market</a></h3>
       <p class="card-summary">Sticking with a status-quo UCaaS platform might hinder an enterprise&#x27;s bottom line. Recent research shows that UCaaS reassessment gets rewarded.</p>
-      
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-04-21T13:39:08+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1srnyx4/ucaas_platform_for_small_business_overkill/" target="_blank" rel="noopener">UCaaS platform for small business - overkill?</a></h3>
-      <p class="card-summary">Picking phone and comms systems for SMB clients is something I do regularly and the evaluation process takes way longer than it should. Every platform has a different definition of what&#x27;s included in their base tier, demos always show best case scenarios and you only discover the missing features or flaky integrations mid-deployment. What&#x27;s the evaluation framework others use to cut through the ma…</p>
       
     </article>
     <article class="card">
@@ -307,7 +307,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-04-23 01:45';
+    var originalTime = '2026-04-23 07:22';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
