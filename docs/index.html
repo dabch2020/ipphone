@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-05-12 13:53（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-05-12 19:27（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -206,6 +206,24 @@
 
   <main class="container">
     <p class="stats">共聚合 6 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-05-12T15:52:02+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1tb5osm/how_are_businesses_or_pbx_vendors_handling/" target="_blank" rel="noopener">How are businesses or PBX vendors handling redundant outbound with all the new regs?</a></h3>
+      <p class="card-summary">So for many years I have built, setup, installed PBX and build/owned a SAAS calling platform. I have ALWAYS setup a redundant outbound calling trunk and these days it&#x27;s usually primary and secondary SIP trunk providers. So, provider A goes down and outbound calls still flow through provider B and customers don&#x27;t have any interruption in outbound calls. Now with all the STIR/SHAKEN regs and rules, …</p>
+      
+    </article>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-05-12T14:00:50+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1tb2j6s/help_idk_what_im_doing/" target="_blank" rel="noopener">Help! IDK what I&#x27;m doing</a></h3>
+      <p class="card-summary">I&#x27;m in accounting and somehow was appointed to being the one in charge of all things technical. We have VOIP phones and are wanting to get away from the current system we use - digium phones and switchvox website (but we stopped paying for the license a couple of years ago); phone lines come through AT&amp;T. We are wanting to get away from subscription-based (why is everything subscription based now?…</p>
+      
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
@@ -226,29 +244,11 @@
     </article>
     <article class="card">
       <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-05-12T09:38:13+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1tawklg/i_built_a_sip_stress_testing_tool_focused_on/" target="_blank" rel="noopener">I built a SIP stress testing tool focused on high-volume VoIP traffic simulation</a></h3>
-      <p class="card-summary">Been working on a SIP stress testing project called SipStress. It’s designed for generating and simulating large amounts of SIP traffic to test VoIP infrastructure behavior under pressure. https://github.com/achrafka/sipstress/tree/main Current focus: SIP flood &amp; traffic generation Concurrent call/session simulation Fast CLI workflow Useful for labs, telecom testing, and defensive research Would a…</p>
-      
-    </article>
-    <article class="card">
-      <div class="card-header">
         <span class="badge" style="background:#e3f2fd;color:#1565c0">UC</span>
         <span class="meta">UC Today · Mon, 11 May 2026 14:30:04 +0000</span>
       </div>
       <h3 class="card-title"><a href="https://www.uctoday.com/unified-communications/why-do-more-meetings-lead-to-fewer-decisions-in-enterprise-teams/" target="_blank" rel="noopener">Why Do More Meetings Lead to Fewer Decisions in Enterprise Teams?</a></h3>
       <p class="card-summary">More meetings produce fewer decisions when responsibility is spread rather than assigned. When too many people share ownership of a topic, no one truly owns the outcome, leading to meeting inefficiency that becomes a daily operational drag in large organisations. The result is a familiar pattern: decision-making bottlenecks, rising delays in workplace collaboration, and a […]</p>
-      
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#e3f2fd;color:#1565c0">UC</span>
-        <span class="meta">No Jitter · Wed, 06 May 2026 17:14:57 GMT</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.nojitter.com/contact-centers/twilio-flexes-new-contact-center-capabilities" target="_blank" rel="noopener">Twilio flexes new contact center capabilities</a></h3>
-      <p class="card-summary">Twilio brings orchestration, memory and intelligent to call and message workflows, along with an API-centric, plug-and-play approach.</p>
       
     </article>
     <article class="card">
@@ -307,7 +307,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-05-12 13:53';
+    var originalTime = '2026-05-12 19:27';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
