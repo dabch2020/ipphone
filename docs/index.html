@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-05-13 02:07（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-05-13 08:33（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -206,6 +206,24 @@
 
   <main class="container">
     <p class="stats">共聚合 7 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#e3f2fd;color:#1565c0">UC</span>
+        <span class="meta">UC Today · Wed, 13 May 2026 08:00:16 +0000</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.uctoday.com/security-compliance-risk/before-the-breach-translating-cyber-risk-so-it-stays-on-the-c-suite-agenda/" target="_blank" rel="noopener">Before the Breach: Translating Cyber Risk So It Stays on the C-Suite Agenda</a></h3>
+      <p class="card-summary">In this candid conversation, Mitel’s CISO, Bill Dunnion, explains why security still struggles to compete with revenue targets at the executive level and what needs to change. Rather than framing cybersecurity as a technical issue, Dunnion argues the case for repositioning it as a core business enabler—one that directly impacts revenue, competitiveness, and customer trust. […]</p>
+      <div class="brand-tags"><span class="brand-tag" style="background:#e3f2fd;color:#01579b">Mitel</span></div>
+    </article>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-05-13T06:10:57+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1tbr1v9/wifi_calling_in_dubai_russian_number/" target="_blank" rel="noopener">Wifi Calling in Dubai Russian Number</a></h3>
+      <p class="card-summary">Hello guys, I’m not sure if there are any Russians in this group, but I need some help. My fiancée recently moved from Russia to Dubai. She works remotely for a Russian company, and they gave her a Russian phone number with an Android phone. Since she works in marketing, she needs to make and receive calls from Russia using Wi-Fi Calling / VoWiFi. I’ve been reading online that VoIP or Wi-Fi Callin…</p>
+      
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
@@ -236,28 +254,10 @@
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-05-12T15:52:02+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1tb5osm/how_are_businesses_or_pbx_vendors_handling/" target="_blank" rel="noopener">How are businesses or PBX vendors handling redundant outbound with all the new regs?</a></h3>
-      <p class="card-summary">So for many years I have built, setup, installed PBX and build/owned a SAAS calling platform. I have ALWAYS setup a redundant outbound calling trunk and these days it&#x27;s usually primary and secondary SIP trunk providers. So, provider A goes down and outbound calls still flow through provider B and customers don&#x27;t have any interruption in outbound calls. Now with all the STIR/SHAKEN regs and rules, …</p>
-      
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
         <span class="meta">Reddit r/VOIP · 2026-05-12T10:03:58+00:00</span>
       </div>
       <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1tax1nj/i_built_a_selfhosted_call_center_platform_on_top/" target="_blank" rel="noopener">I Built a self-hosted call center platform on top of Asterisk</a></h3>
       <p class="card-summary">Hey everyone, Been running Asterisk for a while and got tired of editing dialplan files every time something needed to change. So I built a platform where call flows are stored in a database and executed via Asterisk ARI — you design them visually and changes apply instantly, no reload needed. The SIP capture feature with live ladder diagrams ended up being the most useful thing for debugging trun…</p>
-      
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#e3f2fd;color:#1565c0">UC</span>
-        <span class="meta">UC Today · Mon, 11 May 2026 14:30:04 +0000</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.uctoday.com/unified-communications/why-do-more-meetings-lead-to-fewer-decisions-in-enterprise-teams/" target="_blank" rel="noopener">Why Do More Meetings Lead to Fewer Decisions in Enterprise Teams?</a></h3>
-      <p class="card-summary">More meetings produce fewer decisions when responsibility is spread rather than assigned. When too many people share ownership of a topic, no one truly owns the outcome, leading to meeting inefficiency that becomes a daily operational drag in large organisations. The result is a familiar pattern: decision-making bottlenecks, rising delays in workplace collaboration, and a […]</p>
       
     </article>
     <article class="card">
@@ -316,7 +316,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-05-13 02:07';
+    var originalTime = '2026-05-13 08:33';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
