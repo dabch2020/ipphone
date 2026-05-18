@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-05-18 02:14（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-05-18 09:39（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -205,7 +205,16 @@
   </div>
 
   <main class="container">
-    <p class="stats">共聚合 3 条新闻</p>
+    <p class="stats">共聚合 4 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-05-18T07:38:33+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1tgffkp/looking_for_a_reliable_dialer_for_uscanada_cold/" target="_blank" rel="noopener">Looking for a reliable dialer for US/Canada cold calling (small agency setup)</a></h3>
+      <p class="card-summary">Hey guys, I run a small web agency and do outbound cold calling to businesses in the US and Canada. Mostly manual dialing right now. So far I’ve used Zoom Phone, MightyCall, and RingCentral. They were decent in some areas, but I still haven’t found something that feels fully reliable long term for outbound calling. Main things I care about: - strong call quality - low delay/latency - stable outbou…</p>
+      
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
@@ -280,7 +289,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-05-18 02:14';
+    var originalTime = '2026-05-18 09:39';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
