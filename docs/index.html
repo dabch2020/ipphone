@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-05-26 19:55（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-05-27 02:29（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -206,6 +206,24 @@
 
   <main class="container">
     <p class="stats">共聚合 10 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-05-27T01:10:18+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1toqex6/info_on_sinchintelliquentonvoy/" target="_blank" rel="noopener">Info on Sinch/Intelliquent/Onvoy</a></h3>
+      <p class="card-summary">I&#x27;m investigating these companies (Sinch is the owner of the others), which are accused of facilitating robocalls and spoofing for scammers ( https://commsrisk.com/scamhunters-blast-microsoft-teams-and-sinch-over-voip-numbers-for-callback-frauds/ ). If anyone has any additional relevant info about any of these companies, I&#x27;d be grateful if you could share it or point me to it. submitted by /u/1mor…</p>
+      
+    </article>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#e3f2fd;color:#1565c0">UC</span>
+        <span class="meta">UC Today · Tue, 26 May 2026 18:46:36 +0000</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.uctoday.com/unified-communications/collaboration-accountability/" target="_blank" rel="noopener">Your Collaboration Culture Isn’t Transparent. It’s Making Accountability Impossible to Enforce</a></h3>
+      <p class="card-summary">It’s easy for leaders to convince themselves they’ve got collaboration “handled”, because everyone can see everything. There are shared channels, shared documents, shared dashboards, and endless meeting recaps. But visibility isn’t the same as collaboration accountability. That’s the problem. Work appears scattered across Slack, Microsoft Teams, email, project boards, meetings and AI-generated not…</p>
+      <div class="brand-tags"><span class="brand-tag" style="background:#e8eaf6;color:#5c6bc0">Microsoft Teams</span></div>
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#e8f5e9;color:#2e7d32">企业</span>
@@ -262,29 +280,11 @@
     </article>
     <article class="card">
       <div class="card-header">
-        <span class="badge" style="background:#e3f2fd;color:#1565c0">UC</span>
-        <span class="meta">UC Today · Mon, 25 May 2026 15:48:38 +0000</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.uctoday.com/security-compliance-risk/fix-risk-ownership-accountability/" target="_blank" rel="noopener">Is Your Risk Strategy Just Spreading Responsibility So No One Owns the Outcome?</a></h3>
-      <p class="card-summary">Your risk strategy is likely just spreading responsibility so no one owns the outcome. This happens when leaders confuse collaboration with true risk ownership accountability. A flawed enterprise risk governance structure creates dangerous ambiguity. Teams assume someone else handles the problem. This destroys clear operational risk responsibility across your business. Without strict risk manageme…</p>
-      
-    </article>
-    <article class="card">
-      <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
         <span class="meta">Reddit r/VOIP · 2026-05-25T14:15:24+00:00</span>
       </div>
       <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1tnagy3/anyone_has_success_using_ht812_to_transfer/" target="_blank" rel="noopener">Anyone has success using HT812 to transfer intercom POTS calls to VOIP?</a></h3>
       <p class="card-summary">**Edit: HT813 not 812.** My apartment has an old style intercom where it rings a POTS phone on the wall. There is no dial tone on the line at any other time. I&#x27;m thinking of using an HT813 to trunk the calls to VOIP. Does anyone have success with this kind of setup? I&#x27;m not sure if it would work as there is normally no dial tone on this line. submitted by /u/Aerottawa [link] [comments]</p>
-      
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-05-25T10:13:00+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1tn4tep/callcentric_wont_route_to_a_particular_0371_uk/" target="_blank" rel="noopener">Callcentric won&#x27;t route to a particular 0371 UK number</a></h3>
-      <p class="card-summary">So I have Callcentric set up using both Linphone and Zoiper on my PC and I&#x27;m based in Taiwan. I added credit to the account. The Callcentric account shows the softphone as registering correctly and I can make calls to phones with no problem, for instance my wife&#x27;s cellphone in Taiwan. The problem is I&#x27;m trying to reach the support line of a financial services company in the UK, and it&#x27;s a 0371 pre…</p>
       
     </article>
     <article class="card">
@@ -343,7 +343,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-05-26 19:55';
+    var originalTime = '2026-05-27 02:29';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
