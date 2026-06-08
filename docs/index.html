@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-06-08 02:38（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-06-08 10:16（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -206,6 +206,15 @@
 
   <main class="container">
     <p class="stats">共聚合 12 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-06-08T09:19:20+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1u02rtr/grandstream_ht802_weird_issue_with_incoming_calls/" target="_blank" rel="noopener">Grandstream HT802 weird issue with incoming calls</a></h3>
+      <p class="card-summary">I’ve recently setup a VOIP service with my ISP for my business using a Grandstream HT802 and had everything configured and working correctly, however soon after that incoming calls weren’t going through and would give a “user busy” error to the caller. The weird thing is after I make an outgoing call the incoming calls will work fine for about an hour, but then go back to the user busy error. Is t…</p>
+      
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
@@ -232,15 +241,6 @@
       <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1ty5a1k/grandstream_ata_answer_delay/" target="_blank" rel="noopener">Grandstream ATA answer delay</a></h3>
       <p class="card-summary">We have an office that has all Yealink phones. They all work perfectly. Zero issues dialing in or out. It’s been this way for years. We have now added a grand stream. ATA connected to a cordless phone. Originally had lots of issues with one-way audio, finally able to get that solved using keep alive and other settings inside the ATA. Now, we have a new issue that I have never seen before. Whenever…</p>
       <div class="brand-tags"><span class="brand-tag" style="background:#e8f5e9;color:#2e7d32">Yealink</span></div>
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-06-06T00:25:31+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1ty29zx/what_should_i_look_for_in_a_voip_provider/" target="_blank" rel="noopener">What should I look for in a VOIP provider</a></h3>
-      <p class="card-summary">I do not want specific recommendations.....but I&#x27;d like to know if there are any technology differences in the VoIP offerings that i should be concerned with. Do they all work with any internet provider? Do they all offer caller id? etc. OR are they just competing based on price, package offerings and network they run on. what are the important differences i should look for before deciding on my V…</p>
-      
     </article>
     <article class="card">
       <div class="card-header">
@@ -361,7 +361,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-06-08 02:38';
+    var originalTime = '2026-06-08 10:16';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
