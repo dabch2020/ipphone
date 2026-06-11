@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-06-10 20:10（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-06-11 02:38（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -205,7 +205,16 @@
   </div>
 
   <main class="container">
-    <p class="stats">共聚合 8 条新闻</p>
+    <p class="stats">共聚合 7 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-06-10T21:26:48+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1u2fh4s/voip_calling_help/" target="_blank" rel="noopener">Voip calling help!</a></h3>
+      <p class="card-summary">trying to learn VOIP stuff for scam baiting! submitted by /u/Kninja1321 [link] [comments]</p>
+      
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#e3f2fd;color:#1565c0">UC</span>
@@ -231,24 +240,6 @@
       </div>
       <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1u1ntcs/im_facing_an_issue_with_an_openvox_gsm_pbx_gateway/" target="_blank" rel="noopener">I’m facing an issue with an OpenVox GSM PBX gateway</a></h3>
       <p class="card-summary">I’m facing an issue with an OpenVox GSM PBX gateway that has 5 SIM cards, and I’d like your help understanding it. Call Flow Scenario: SIM 1 receives the incoming call from users (this number is published, so I cannot stop using it). SIM 1 cannot handle two calls at the same time. The call is forwarded to SIM 2. SIM 2 answers the call and then places an outgoing international call using SIM 4. If …</p>
-      
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-06-09T20:00:31+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1u1g1mu/yealink_stores_sip_uri_in_call_history_instead_of/" target="_blank" rel="noopener">Yealink stores SIP URI in call history instead of phone number (UCM6301)</a></h3>
-      <p class="card-summary">Hi everyone, I’m running a Grandstream UCM6301 with Yealink phones and a Gigaset DECT handset. I have configured inbound caller ID normalization so incoming mobile numbers are displayed correctly (e.g. 0612345678). Contacts are matched correctly and the incoming caller ID looks fine on the display. However, on the Yealink phones, the call history stores the number as a SIP URI. When I try to redia…</p>
-      <div class="brand-tags"><span class="brand-tag" style="background:#e8f5e9;color:#2e7d32">Yealink</span></div>
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-06-09T14:18:07+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1u16aye/25gbs_ip_phones_do_they_exist/" target="_blank" rel="noopener">2.5Gb/s IP Phones - do they exist?</a></h3>
-      <p class="card-summary">I have run into my first network with 2.5Gb/s switches and NICs in the computers. They only have one drop to every location and they do not want to step down the computers to 1Gb/s because of an inline phone. Has anyone run across a SIP phone that has 2.5Gb/s passthrough? They are using multiple 2.5Gb/s Unifi switches with PoE. The only other option I can see is run the phones of WiFi and power th…</p>
       
     </article>
     <article class="card">
@@ -325,7 +316,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-06-10 20:10';
+    var originalTime = '2026-06-11 02:38';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
