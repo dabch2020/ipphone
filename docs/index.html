@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-06-12 02:34（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-06-12 09:55（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -206,6 +206,15 @@
 
   <main class="container">
     <p class="stats">共聚合 10 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-06-12T03:09:28+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1u3jn4t/lessons_learned_running_avaya_aads_at_global/" target="_blank" rel="noopener">Lessons learned running Avaya AADS at global scale — what the documentation won&#x27;t tell you</a></h3>
+      <p class="card-summary">Spent several years operating a global AADS deployment across 6 servers in 3 COLOs (Americas, EMEA, APAC) plus a dedicated India cluster. Here are the things I wish someone had told me before we went live. 1. The cluster is not truly redundant — don&#x27;t let the architecture diagram fool you AADS uses a cluster model that looks redundant on paper, but in practice a failure of the Seed node impacts th…</p>
+      <div class="brand-tags"><span class="brand-tag" style="background:#ffebee;color:#c62828">Avaya</span></div>
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
@@ -280,15 +289,6 @@
     </article>
     <article class="card">
       <div class="card-header">
-        <span class="badge" style="background:#e3f2fd;color:#1565c0">UC</span>
-        <span class="meta">No Jitter · Mon, 08 Jun 2026 14:42:36 GMT</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.nojitter.com/ai-automation/how-ai-is-reshaping-ucaas-and-ccaas-pricing" target="_blank" rel="noopener">How AI is reshaping UCaaS and CCaaS pricing</a></h3>
-      <p class="card-summary">We celebrate when employees produce more high-quality work. But if an AI teammate does the same, we may need to check whether we can afford it.</p>
-      
-    </article>
-    <article class="card">
-      <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
         <span class="meta">Reddit r/VOIP · 2026-06-01T00:01:31+00:00</span>
       </div>
@@ -343,7 +343,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-06-12 02:34';
+    var originalTime = '2026-06-12 09:55';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
