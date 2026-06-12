@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-06-12 14:33（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-06-12 19:52（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -208,11 +208,20 @@
     <p class="stats">共聚合 8 条新闻</p>
     <article class="card">
       <div class="card-header">
-        <span class="badge" style="background:#e8f5e9;color:#2e7d32">企业</span>
-        <span class="meta">TechTarget UC · Fri, 12 Jun 2026 08:05:00 GMT</span>
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-06-12T15:42:03+00:00</span>
       </div>
-      <h3 class="card-title"><a href="https://www.computerweekly.com/news/366644106/Shure-Zoom-evolve-collaboration-with-flexible-workspaces" target="_blank" rel="noopener">Shure, Zoom evolve collaboration with flexible workspaces</a></h3>
-      <p class="card-summary">&lt;p&gt;Workplace collaboration solutions provider Shure is enhancing its commitment to customers by providing “reliable, scalable meeting room solutions that easily standardise across Zoom workspaces and higher education” with the launch of its IntelliMix Collaboration Portfolio.&lt;/p&gt; &lt;p&gt;Putting the launch into perspective, &lt;a href=&quot;https://www.shure.com/en-GB&quot;&gt;Shure&lt;/a&gt; noted that when it comes to col…</p>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1u3yvlm/how_to_have_my_wh64_control_my_deskphone/" target="_blank" rel="noopener">How to have my WH64 control my deskphone?</a></h3>
+      <p class="card-summary">So I have a T73 and just bought a WH64 Hybrid to go with it. Came with the DECT usb stick and I have it plugged into my T73. Right now I have to press the headset button on the T73 anytime I want to make a call or answer an incoming on the headset. On my old POTS phone I could pre-dial, then hit the button on my headset to have it dial as well as just hitting the button to answer an incoming call.…</p>
+      
+    </article>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#e8f5e9;color:#2e7d32">企业</span>
+        <span class="meta">TechTarget UC · Fri, 12 Jun 2026 15:20:00 GMT</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.techtarget.com/searchunifiedcommunications/tip/Enhanced-911-transitions-to-Next-Generation-911" target="_blank" rel="noopener">Enhanced 911 transitions to Next Generation 911</a></h3>
+      <p class="card-summary">&lt;p&gt;The Enterprise Connect session on 911 requirements is arguably the only topic at the conference with life-or-death implications. Get 911 wrong, and you put health and safety in danger. Without proper 911 administration, anyone who needs assistance may not reach the right emergency services call center, and first responders may not locate callers quickly.&lt;/p&gt; &lt;p&gt;The panel discussion had some key…</p>
       
     </article>
     <article class="card">
@@ -223,15 +232,6 @@
       <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1u3jn4t/lessons_learned_running_avaya_aads_at_global/" target="_blank" rel="noopener">Lessons learned running Avaya AADS at global scale — what the documentation won&#x27;t tell you</a></h3>
       <p class="card-summary">Spent several years operating a global AADS deployment across 6 servers in 3 COLOs (Americas, EMEA, APAC) plus a dedicated India cluster. Here are the things I wish someone had told me before we went live. 1. The cluster is not truly redundant — don&#x27;t let the architecture diagram fool you AADS uses a cluster model that looks redundant on paper, but in practice a failure of the Seed node impacts th…</p>
       <div class="brand-tags"><span class="brand-tag" style="background:#ffebee;color:#c62828">Avaya</span></div>
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-06-11T19:23:46+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1u38r8i/on_grandstream_phones_atas_redirecting_911_calls/" target="_blank" rel="noopener">On Grandstream phones &amp; ATAs, redirecting 911 calls to an alternate number</a></h3>
-      <p class="card-summary">For a Grandstream phone or ATA, here&#x27;s a dial plan that allows calls to regular numbers and to 911: { 1[2-9]xx[2-9]xxxxxx | 911 } A dial plan entry in this format ..... &lt;AAAAA=BBBBBBBBBBB&gt; ..... means &quot;whenever AAAAA is dialed, send the call to BBBBBBBBBBB instead&quot; So if someone wants to avoid paying a VOIP company&#x27;s E911 fee (typically around $1.50 monthly) but still have substantial 911 function…</p>
-      
     </article>
     <article class="card">
       <div class="card-header">
@@ -325,7 +325,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-06-12 14:33';
+    var originalTime = '2026-06-12 19:52';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
