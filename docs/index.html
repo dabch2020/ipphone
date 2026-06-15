@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-06-15 02:43（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-06-15 11:44（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -205,7 +205,16 @@
   </div>
 
   <main class="container">
-    <p class="stats">共聚合 8 条新闻</p>
+    <p class="stats">共聚合 6 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#e3f2fd;color:#1565c0">UC</span>
+        <span class="meta">UC Today · Mon, 15 Jun 2026 09:30:47 +0000</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.uctoday.com/unified-communications/microsoft-teams-is-getting-a-dedicated-meeting-recap-app-this-month-heres-what-it-teams-need-to-do-before-it-arrives/" target="_blank" rel="noopener">Microsoft Teams Is Getting a Dedicated Meeting Recap App This Month. Here’s What IT Teams Need to Do Before It Arrives.</a></h3>
+      <p class="card-summary">Teams has had meeting recap functionality for years. What changes in June 2026 is where it lives. Rather than hunting across calendar entries, chat histories, recordings, and the recap tab, users will find everything in a single dedicated app on the Teams left rail. The shift sounds small. For IT teams managing recording policies across […]</p>
+      <div class="brand-tags"><span class="brand-tag" style="background:#e8eaf6;color:#5c6bc0">Microsoft Teams</span></div>
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
@@ -235,39 +244,12 @@
     </article>
     <article class="card">
       <div class="card-header">
-        <span class="badge" style="background:#e8f5e9;color:#2e7d32">企业</span>
-        <span class="meta">TechTarget UC · Fri, 12 Jun 2026 15:20:00 GMT</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.techtarget.com/searchunifiedcommunications/tip/Enhanced-911-transitions-to-Next-Generation-911" target="_blank" rel="noopener">Enhanced 911 transitions to Next Generation 911</a></h3>
-      <p class="card-summary">&lt;p&gt;The Enterprise Connect session on 911 requirements is arguably the only topic at the conference with life-or-death implications. Get 911 wrong, and you put health and safety in danger. Without proper 911 administration, anyone who needs assistance may not reach the right emergency services call center, and first responders may not locate callers quickly.&lt;/p&gt; &lt;p&gt;The panel discussion had some key…</p>
-      
-    </article>
-    <article class="card">
-      <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
         <span class="meta">Reddit r/VOIP · 2026-06-12T03:09:28+00:00</span>
       </div>
       <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1u3jn4t/lessons_learned_running_avaya_aads_at_global/" target="_blank" rel="noopener">Lessons learned running Avaya AADS at global scale — what the documentation won&#x27;t tell you</a></h3>
       <p class="card-summary">Spent several years operating a global AADS deployment across 6 servers in 3 COLOs (Americas, EMEA, APAC) plus a dedicated India cluster. Here are the things I wish someone had told me before we went live. 1. The cluster is not truly redundant — don&#x27;t let the architecture diagram fool you AADS uses a cluster model that looks redundant on paper, but in practice a failure of the Seed node impacts th…</p>
       <div class="brand-tags"><span class="brand-tag" style="background:#ffebee;color:#c62828">Avaya</span></div>
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#e3f2fd;color:#1565c0">UC</span>
-        <span class="meta">UC Today · Thu, 11 Jun 2026 11:50:40 +0000</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.uctoday.com/unified-communications/is-slack-replacing-your-project-management-tool/" target="_blank" rel="noopener">Is Slack Replacing Your Project Management Tool?</a></h3>
-      <p class="card-summary">Enterprise buyers are beginning to ask a pointed question: Can the collaboration tool they already pay for quietly become a substitute for their project management platform? As Salesforce posts record AI numbers and Microsoft consolidates its work management stack, the boundary between chat and project management is visibly shifting. The evidence deserves serious attention, but […]</p>
-      
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#e3f2fd;color:#1565c0">UC</span>
-        <span class="meta">UC Today · Thu, 11 Jun 2026 09:51:22 +0000</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.uctoday.com/service-management-connectivity/third-party-network-visibility-uc-reliability/" target="_blank" rel="noopener">Why Is Your UC Reliability Only as Strong as the Weakest Network You Don’t Own?</a></h3>
-      <p class="card-summary">Unified communications reliability often fails for a simple reason. Organizations rely heavily on external infrastructure they do not own. Moving to the cloud introduces massive enterprise connectivity risk as IT leaders lose control over the actual routing paths. A strong UC observability strategy is necessary to monitor public internets. Without proper third-party network visibility, finding […]</p>
-      
     </article>
     <article class="card">
       <div class="card-header">
@@ -325,7 +307,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-06-15 02:43';
+    var originalTime = '2026-06-15 11:44';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
