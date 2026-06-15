@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-06-15 16:56（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-06-15 20:44（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -205,7 +205,16 @@
   </div>
 
   <main class="container">
-    <p class="stats">共聚合 7 条新闻</p>
+    <p class="stats">共聚合 6 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-06-15T18:30:48+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1u6p02a/cell_to_voip_bridge_does_this_exist/" target="_blank" rel="noopener">Cell to VoIP bridge - does this exist?</a></h3>
+      <p class="card-summary">Here&#x27;s what I&#x27;m imagining: A device that I connect to my PBX where I insert a SIM card, and all calls/texts are forwarded to the PBX. Even better if I can then send texts and make calls using the bridge, but incoming is all I really care about for now. Does such a device exist? The primary motivation is to receive 2FA texts. To be clear: I am aware GSM gateways exist. However, all of the ones I&#x27;ve…</p>
+      
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#e3f2fd;color:#1565c0">UC</span>
@@ -213,24 +222,6 @@
       </div>
       <h3 class="card-title"><a href="https://www.nojitter.com/infrastructure/ai-drives-large-increase-in-network-traffic-cisco-and-foundry-find" target="_blank" rel="noopener">AI drives large increase in network traffic, Cisco and Foundry find</a></h3>
       <p class="card-summary">Generative and agentic AI solutions are increasing total campus and branch network traffic, and causing spikes, which could ultimately degrade CX.</p>
-      <div class="brand-tags"><span class="brand-tag" style="background:#e3f2fd;color:#049fd9">Cisco</span></div>
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#e8f5e9;color:#2e7d32">企业</span>
-        <span class="meta">TechTarget UC · Mon, 15 Jun 2026 11:37:00 GMT</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.techtarget.com/searchcio/opinion/CIO-CFO-collaboration-Why-these-rivals-must-become-allies" target="_blank" rel="noopener">CIO-CFO collaboration: Why these rivals must become allies</a></h3>
-      <p class="card-summary">&lt;div class=&quot;extra-info&quot;&gt; &lt;div class=&quot;extra-info-inner&quot;&gt; &lt;h2&gt;Executive summary&lt;/h2&gt; &lt;ul class=&quot;default-list&quot;&gt; &lt;li&gt;&lt;strong&gt;The real problem.&lt;/strong&gt; CIOs and CFOs don&#x27;t disagree -- they misunderstand each other before conversations even begin.&lt;/li&gt; &lt;li&gt;&lt;strong&gt;The communication gap.&lt;/strong&gt; CIOs struggle to articulate technology value in commercial terms, retreating to cost-focused discussions abo…</p>
-      
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#e8f5e9;color:#2e7d32">企业</span>
-        <span class="meta">TechTarget UC · Mon, 15 Jun 2026 10:14:00 GMT</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.computerweekly.com/news/366644458/Boldyn-enhances-transport-communications-for-TfL-BART" target="_blank" rel="noopener">Boldyn enhances transport communications for TfL, BART</a></h3>
-      <p class="card-summary">&lt;p&gt;Neutral host provider Boldyn Networks has improved onboard mobile communications for two of the largest transport systems in the world – the Bay Area Rapid Transport (BART) system in the San Francisco region, and London’s Underground network – to enable more passengers to stay connected and to allow emergency services access to critical data.&lt;/p&gt; &lt;p&gt;&lt;a href=&quot;https://www.bart.gov/&quot;&gt;BART&lt;/a&gt; is a…</p>
       <div class="brand-tags"><span class="brand-tag" style="background:#e3f2fd;color:#049fd9">Cisco</span></div>
     </article>
     <article class="card">
@@ -316,7 +307,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-06-15 16:56';
+    var originalTime = '2026-06-15 20:44';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
