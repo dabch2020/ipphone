@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-06-17 14:49（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-06-17 19:58（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -205,7 +205,16 @@
   </div>
 
   <main class="container">
-    <p class="stats">共聚合 5 条新闻</p>
+    <p class="stats">共聚合 6 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-06-17T16:04:05+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1u8ed5a/isps_and_banks_cutting_corners_on_voice/" target="_blank" rel="noopener">ISPs and banks cutting corners on voice infrastructure — who&#x27;s actually paying the price?</a></h3>
+      <p class="card-summary">Been in enterprise voice for 25 years. Something I keep seeing that bothers me: Large ISPs and banks spend millions on CRM, fraud detection, and digital platforms — then run their contact center voice infrastructure on the cheapest VoIP option available. The results are predictable: Choppy audio during support calls One-way audio that forces the agent to hang up Calls dropping mid-interaction with…</p>
+      
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#e3f2fd;color:#1565c0">UC</span>
@@ -298,7 +307,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-06-17 14:49';
+    var originalTime = '2026-06-17 19:58';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
