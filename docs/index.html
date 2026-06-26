@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-06-25 19:44（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-06-26 02:14（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -206,6 +206,24 @@
 
   <main class="container">
     <p class="stats">共聚合 10 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-06-25T21:38:37+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1ufned3/what_multitenant_systems_are_available_for_an_msp/" target="_blank" rel="noopener">What multi-tenant systems are available for an MSP?</a></h3>
+      <p class="card-summary">Hi all, I&#x27;m an Australian-based MSP, specializing in VoIP and legacy telephony, currently reselling Yeastar P-Series, Avaya IP Office, and OpenScape Business (where needed) to my customers. I want to move to a single, self-hosted, multi-tenant system that all future customers provision onto, rather than spinning up a dedicated instance per customer. My goals are to unify the programming knowledge …</p>
+      <div class="brand-tags"><span class="brand-tag" style="background:#ffebee;color:#c62828">Avaya</span></div>
+    </article>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-06-25T21:12:55+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1ufmq60/test_call/" target="_blank" rel="noopener">Test Call</a></h3>
+      <p class="card-summary">How do I make a test call to a VOIP phone? I&#x27;ve tried a bunch of websites and automated call services but they all seem to block VOIP numbers so I can&#x27;t test them. What can I do to simply test a phone call to my VOIP phone by myself? submitted by /u/su-do_nym [link] [comments]</p>
+      
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#e3f2fd;color:#1565c0">UC</span>
@@ -223,15 +241,6 @@
       <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1ufb2bh/need_legacy_sccp_firmware_for_a_factorylooped/" target="_blank" rel="noopener">Need legacy SCCP firmware for a factory-looped Cisco 7975G</a></h3>
       <p class="card-summary">Hi everyone, I ran into a brick wall trying to factory reset/configure a Cisco 7975G IP phone. I did a deep factory wipe using the alternative sequence (⁠3491672850*#⁠), which cleared the local flash cache and left the screen blacked out. My Tftpd64 logs show that the phone still successfully pulls ⁠term75.default.loads⁠ twice, but then immediately drops the connection and restarts. I need to step…</p>
       <div class="brand-tags"><span class="brand-tag" style="background:#e3f2fd;color:#049fd9">Cisco</span></div>
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#e8f5e9;color:#2e7d32">企业</span>
-        <span class="meta">TechTarget UC · Thu, 25 Jun 2026 13:20:00 GMT</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.techtarget.com/searchunifiedcommunications/feature/CIOs-must-rethink-governance-for-AI-collaboration-tools" target="_blank" rel="noopener">CIOs must rethink governance for AI collaboration tools</a></h3>
-      <p class="card-summary">&lt;p&gt;The most valuable knowledge inside many organizations no longer lives in documents.&amp;nbsp;Knowledge lives in meeting transcripts, chat threads, customer interactions, AI-generated summaries, action items and decisions made in a video meeting&amp;nbsp;and surfaced weeks later by a virtual assistant.&amp;nbsp;As AI becomes &lt;a href=&quot;https://www.techtarget.com/searchunifiedcommunications/feature/Assessing-t…</p>
-      
     </article>
     <article class="card">
       <div class="card-header">
@@ -276,15 +285,6 @@
       </div>
       <h3 class="card-title"><a href="https://www.nojitter.com/contact-centers/8x8-debuts-ai-routing-for-the-entire-organization" target="_blank" rel="noopener">8x8 debuts AI routing for the entire organization</a></h3>
       <p class="card-summary">Two things stand out: automated skill discovery with supervisor oversight and a routing engine that extends beyond the contact center.</p>
-      
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-06-24T09:40:27+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1ue8w0y/my_experience_switching_to_voipfone_to_maintain/" target="_blank" rel="noopener">My experience switching to VOIPfone to maintain my old landline number (UK)</a></h3>
-      <p class="card-summary">My broadband provider (UK) is ceasing landline phone service as it switches customers to fibre. I decided to port my number to VOIPfone. Here are my main takeaways: - VOIPfone is a great company. They have been so helpful and actually provided knowledgeable staff to advise me as needed - Plusnet - my broadband provider - were less helpful. Their advisor wasn&#x27;t very clear on how to port the number.…</p>
       
     </article>
     <article class="card">
@@ -343,7 +343,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-06-25 19:44';
+    var originalTime = '2026-06-26 02:14';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
