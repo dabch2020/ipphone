@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-06-27 08:25（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-06-27 13:08（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -205,7 +205,16 @@
   </div>
 
   <main class="container">
-    <p class="stats">共聚合 9 条新闻</p>
+    <p class="stats">共聚合 10 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-06-27T10:51:28+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1ugzn6i/allworx_phones_stable_on_hpdellcatalyst_1200/" target="_blank" rel="noopener">Allworx phones stable on HP/Dell/Catalyst 1200 switches, but lose registration after a few minutes on Cisco CBS switches</a></h3>
+      <p class="card-summary">I’m troubleshooting an Allworx phone deployment and looking for input. Phones connected to HP switches, Dell switches, and a Catalyst 1200 switch are working fine and staying stable. Phones connected to Cisco CBS switches are the problem. This includes CBS220, CBS250, and CBS350 switches. The phones on the CBS switches will: Boot normally Join the voice network Register to the Allworx server Make …</p>
+      <div class="brand-tags"><span class="brand-tag" style="background:#e3f2fd;color:#049fd9">Cisco</span></div>
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
@@ -334,7 +343,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-06-27 08:25';
+    var originalTime = '2026-06-27 13:08';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
