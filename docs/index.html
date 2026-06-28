@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-06-28 08:39（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-06-28 13:15（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -206,6 +206,15 @@
 
   <main class="container">
     <p class="stats">共聚合 9 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-06-28T11:42:57+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1uhv5e9/use_a_voip_while_also_keeping_landline/" target="_blank" rel="noopener">Use a VOIP while also keeping landline</a></h3>
+      <p class="card-summary">I have a business in which I have a landline in the office with various people making calls from different lines on the landline throughout the day. I will be out of town for a while but would still like to make calls from that landline number from my cell phone. Is there a VOIP that can do this but still keep my physical phones in the office active? I was just introduced to this idea yesterday so…</p>
+      
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
@@ -221,7 +230,7 @@
         <span class="meta">Reddit r/VOIP · 2026-06-27T10:51:28+00:00</span>
       </div>
       <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1ugzn6i/allworx_phones_stable_on_hpdellcatalyst_1200/" target="_blank" rel="noopener">Allworx phones stable on HP/Dell/Catalyst 1200 switches, but lose registration after a few minutes on Cisco CBS switches</a></h3>
-      <p class="card-summary">I’m troubleshooting an Allworx phone deployment and looking for input. Phones connected to HP switches, Dell switches, and a Catalyst 1200 switch are working fine and staying stable. Phones connected to Cisco CBS switches are the problem. This includes CBS220, CBS250, and CBS350 switches. The phones on the CBS switches will: Boot normally Join the voice network Register to the Allworx server Make …</p>
+      <p class="card-summary">Update: manually trunking ports fixed the problem. I’m troubleshooting an Allworx phone deployment and looking for input. Phones connected to HP switches, Dell switches, and a Catalyst 1200 switch are working fine and staying stable. Phones connected to Cisco CBS switches are the problem. This includes CBS220, CBS250, and CBS350 switches. The phones on the CBS switches will: Boot normally Join the…</p>
       <div class="brand-tags"><span class="brand-tag" style="background:#e3f2fd;color:#049fd9">Cisco</span></div>
     </article>
     <article class="card">
@@ -268,15 +277,6 @@
       <h3 class="card-title"><a href="https://www.uctoday.com/service-management-connectivity/cisco-sd-wan-manager-zero-day-turns-the-networks-control-plane-into-the-target/" target="_blank" rel="noopener">Cisco SD-WAN Manager Zero-Day Turns the Network’s Control Plane Into the Target</a></h3>
       <p class="card-summary">The single dashboard that makes SD-WAN easy to run has become the thing attackers most want to own. Google’s Mandiant team has published a detailed account of one such intrusion. A threat actor exploited a zero-day in Cisco Catalyst SD-WAN Manager, tracked as CVE-2026-20245. The flaw let it escalate from a compromised admin account to […]</p>
       <div class="brand-tags"><span class="brand-tag" style="background:#e3f2fd;color:#049fd9">Cisco</span></div>
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-06-25T10:50:39+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1uf6n6y/how_long_for_voipms_to_say_number_is_portable/" target="_blank" rel="noopener">How long for VOIP.ms to say number is portable?</a></h3>
-      <p class="card-summary">I have a landline number which the VOIP.ms DID Portability tool told me that it wasn&#x27;t portable so I read a workaround was to port it to Mobile first and then try to port it to VOIP.ms, I just ported to a prepaid mobile carrier today and the number still shows its not portable but I think maybe you need to allow some time for whatever database VOIP.ms uses to update itself? I was wondering how lon…</p>
-      
     </article>
     <article class="card">
       <div class="card-header">
@@ -334,7 +334,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-06-28 08:39';
+    var originalTime = '2026-06-28 13:15';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
