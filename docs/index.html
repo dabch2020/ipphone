@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-06-28 19:01（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-06-29 02:31（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -205,7 +205,16 @@
   </div>
 
   <main class="container">
-    <p class="stats">共聚合 7 条新闻</p>
+    <p class="stats">共聚合 6 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-06-28T22:29:48+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1uiat71/need_help_with_poly_edge_b10_and_setting_the_line/" target="_blank" rel="noopener">Need help with Poly Edge B10 and setting the Line Key text</a></h3>
+      <p class="card-summary">Working to switch over to Poly phones, but having 1 problem. Trying to set the Line Key with custom text, and no matter what guide I&#x27;ve tried, it still remains blank. Even went thru the phone directly, which sets the X_DisplayLabel under Voice Service -&gt; SP1 Service. Ready to give up on Poly phones, and stick with Grandstream. Doing something this simple, should not be this difficult. Thanks submi…</p>
+      <div class="brand-tags"><span class="brand-tag" style="background:#f3e5f5;color:#7b1fa2">Poly</span></div>
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
@@ -214,24 +223,6 @@
       <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1uhv5e9/use_a_voip_while_also_keeping_landline/" target="_blank" rel="noopener">Use a VOIP while also keeping landline</a></h3>
       <p class="card-summary">I have a business in which I have a landline in the office with various people making calls from different lines on the landline throughout the day. I will be out of town for a while but would still like to make calls from that landline number from my cell phone. Is there a VOIP that can do this but still keep my physical phones in the office active? I was just introduced to this idea yesterday so…</p>
       
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-06-27T14:11:00+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1uh3rvq/i_built_a_small_siprtp_library_in_pure_python/" target="_blank" rel="noopener">I built a small SIP/RTP library in pure Python — looking for feedback from the VoIP community</a></h3>
-      <p class="card-summary">Hey everyone, I’ve been messing around with SIP/VoIP stuff for a while and decided to build my own small Python SIP/RTP library just to better understand how everything works under the hood. It’s called OpenSIP and it’s built with pure Python + &quot;asyncio&quot;. Right now it can handle things like: - SIP REGISTER - Making and receiving calls - RTP audio - G.711 PCMU / PCMA codecs - DTMF - Digest authenti…</p>
-      
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-06-27T10:51:28+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1ugzn6i/allworx_phones_stable_on_hpdellcatalyst_1200/" target="_blank" rel="noopener">Allworx phones stable on HP/Dell/Catalyst 1200 switches, but lose registration after a few minutes on Cisco CBS switches</a></h3>
-      <p class="card-summary">Update: manually trunking ports fixed the problem. I’m troubleshooting an Allworx phone deployment and looking for input. Phones connected to HP switches, Dell switches, and a Catalyst 1200 switch are working fine and staying stable. Phones connected to Cisco CBS switches are the problem. This includes CBS220, CBS250, and CBS350 switches. The phones on the CBS switches will: Boot normally Join the…</p>
-      <div class="brand-tags"><span class="brand-tag" style="background:#e3f2fd;color:#049fd9">Cisco</span></div>
     </article>
     <article class="card">
       <div class="card-header">
@@ -316,7 +307,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-06-28 19:01';
+    var originalTime = '2026-06-29 02:31';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
