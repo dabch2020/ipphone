@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-07-08 01:44（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-07-08 08:06（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -205,7 +205,16 @@
   </div>
 
   <main class="container">
-    <p class="stats">共聚合 7 条新闻</p>
+    <p class="stats">共聚合 8 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-07-08T07:50:55+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1uqm0fk/passive_sip_monitoring_with_ebpf_zeroimpact_voip/" target="_blank" rel="noopener">Passive SIP monitoring with eBPF: zero-impact VoIP observability without agents or SPAN ports</a></h3>
+      <p class="card-summary">SIP monitoring is harder than HTTP monitoring. The protocol is stateful — every call is a dialog (INVITE → 200 OK → BYE), quality metrics are standardized in RFC 6076 but rarely implemented in open source, and aggregated metrics hide problems of specific traffic sources. Existing solutions typically require agents on servers, SPAN ports on switches, or vendor lock-in. I wanted something simpler: c…</p>
+      
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
@@ -316,7 +325,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-07-08 01:44';
+    var originalTime = '2026-07-08 08:06';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
