@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-07-10 01:54（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-07-10 09:17（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -206,6 +206,15 @@
 
   <main class="container">
     <p class="stats">共聚合 10 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-07-10T04:04:40+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1uscu86/any_us_sip_trunk_providers_actually_support_ipv6/" target="_blank" rel="noopener">Any US SIP trunk providers actually support IPv6 in 2026?</a></h3>
+      <p class="card-summary">Been going down a rabbit hole trying to build a fully IPv6 voice setup and hitting a wall on the carrier side. Setup: ~11 Polycom VVX 450s across two sites, planning FreePBX (maybe 3CX). Phones support IPv6 fine on UC software, Asterisk/FreeSWITCH have supported it forever. The problem is finding a trunk provider that actually does IPv6 SIP signaling/media. What I’ve found so far: VoIP.ms - no (co…</p>
+      <div class="brand-tags"><span class="brand-tag" style="background:#f3e5f5;color:#7b1fa2">Poly</span> <span class="brand-tag" style="background:#f3e5f5;color:#7b1fa2">Polycom</span></div>
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#e8f5e9;color:#2e7d32">企业</span>
@@ -222,15 +231,6 @@
       </div>
       <h3 class="card-title"><a href="https://www.nojitter.com/contact-centers/5-numbers-showing-how-contact-centers-use-ai" target="_blank" rel="noopener">5 numbers showing how contact centers use AI</a></h3>
       <p class="card-summary">Real time agent assistance and summarization are among the top use cases for AI in the contact center.</p>
-      
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#e8f5e9;color:#2e7d32">企业</span>
-        <span class="meta">TechTarget UC · Thu, 09 Jul 2026 12:00:00 GMT</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.techtarget.com/searchunifiedcommunications/tip/Top-UCaaS-features-to-enhance-productivity" target="_blank" rel="noopener">Top 7 UCaaS features to enhance productivity</a></h3>
-      <p class="card-summary">&lt;p&gt;There is no question that unified communications as a service now dominates the workplace collaboration landscape.&lt;/p&gt; &lt;p&gt;Consider: Almost 59% of companies surveyed in Metrigy&#x27;s &quot;Workplace Collaboration MetriCast: 2025&quot;&lt;i&gt;&amp;nbsp;&lt;/i&gt;global research study of 797 organizations labeled unified communications as a service (UCaaS) as their primary platform for calling, meetings and messaging. Of thos…</p>
       
     </article>
     <article class="card">
@@ -343,7 +343,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-07-10 01:54';
+    var originalTime = '2026-07-10 09:17';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
