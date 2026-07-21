@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-07-21 08:07（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-07-21 13:15（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -205,7 +205,16 @@
   </div>
 
   <main class="container">
-    <p class="stats">共聚合 7 条新闻</p>
+    <p class="stats">共聚合 6 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#e3f2fd;color:#1565c0">UC</span>
+        <span class="meta">UC Today · Tue, 21 Jul 2026 13:01:09 +0000</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.uctoday.com/security-compliance-risk/cisco-launches-antares-what-the-new-ai-security-models-mean-for-enterprises/" target="_blank" rel="noopener">Cisco Launches Antares: What the New AI Security Models Mean for Enterprises</a></h3>
+      <p class="card-summary">Cisco has unveiled Antares, a new family of security-focused small language models (SLMs) designed to tackle one of the most resource-intensive challenges in cybersecurity: locating where known vulnerabilities exist within a codebase. The company is releasing two models, Antares-350M and Antares-1B, as open-weight models that are freely available to the broader community via Hugging Face. […]</p>
+      <div class="brand-tags"><span class="brand-tag" style="background:#e3f2fd;color:#049fd9">Cisco</span></div>
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#e3f2fd;color:#1565c0">UC</span>
@@ -241,24 +250,6 @@
       <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1uzg3t9/ringcentralmitel_485g_custom_ringtone_provisioning/" target="_blank" rel="noopener">RingCentral/Mitel 485G Custom Ringtone Provisioning</a></h3>
       <p class="card-summary">Does anyone know the configuration file format for a RingCentral firmware converted Mitel 485G? I am trying to provision custom ringtones to the phones. I do not have a RingCentral subscription or tie, I am just using their firmware to connect it to a standard SIP PABX. submitted by /u/Sorry_Crazy5259 [link] [comments]</p>
       <div class="brand-tags"><span class="brand-tag" style="background:#e3f2fd;color:#01579b">Mitel</span></div>
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-07-17T13:35:28+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1uyzxo7/siptrunk_issues/" target="_blank" rel="noopener">Siptrunk Issues?</a></h3>
-      <p class="card-summary">Anyone seeing SipTrunk .com issues this morning? We have a whole swath (dozens) of DIDs just not completing or mis-routing across 30 or so PBX instances. Updated as the mods have blessed this post with reinstatement. While we have some finger pointing going on the issues appears to be a very bad glitch on our Yeastar annual renewal. Not sure how yet...all our DIDs (40ish) across about 15 pbxs were…</p>
-      
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-07-16T19:20:50+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1uycj44/stop_posting_ai_slop/" target="_blank" rel="noopener">Stop posting AI slop</a></h3>
-      <p class="card-summary">Much like the humble corvid, the moderators of r/VoIP have rudimentary pattern recognition skills. We can tell when a post clearly wasn&#x27;t written by a human. Stop posting AI-generated nonsense. If I find one more post with excessive em dashes, &quot;curious to see...&quot; or more than one instance of the words &quot;actually&quot; or &quot;genuinely&quot; I&#x27;m going to stop being polite. It&#x27;s especially frustrating when you po…</p>
-      
     </article>
     <article class="card">
       <div class="card-header">
@@ -316,7 +307,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-07-21 08:07';
+    var originalTime = '2026-07-21 13:15';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
