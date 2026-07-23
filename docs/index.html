@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-07-23 13:23（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-07-23 18:57（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -205,7 +205,25 @@
   </div>
 
   <main class="container">
-    <p class="stats">共聚合 5 条新闻</p>
+    <p class="stats">共聚合 6 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-07-23T15:35:28+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1v4hd81/anyone_using_alianza_as_an_spmsp_or_even_as_end/" target="_blank" rel="noopener">Anyone using Alianza as an SP/MSP or even as end user?</a></h3>
+      <p class="card-summary">Just curious if anyone wanted to share recent experiences with Alianza since their acquisition of Metaswitch? They have another one of their conferences coming up that includes sessions about AI integration with VoIP, but that sounds a lot like what they talked about last year and I haven&#x27;t seen anything materialize. submitted by /u/Remarkable_Ad_8719 [link] [comments]</p>
+      
+    </article>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-07-23T14:11:41+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1v4f34r/fs_switch_fs_s5440l_switch_with_cisco_ip_phones/" target="_blank" rel="noopener">FS Switch - FS S5440L switch with Cisco IP phones - Voice VLAN</a></h3>
+      <p class="card-summary">After a lot of trial and error, I finally got Voice VLAN working on an FS S5440L switch with Cisco IP phones, so hopefully this saves someone else a few hours. My setup: Data VLAN: 38 Voice VLAN: 140 Cisco 7841 and 8845 phones The port configuration that finally worked was: interface eth-0-5 switchport mode trunk switchport trunk native vlan 38 switchport trunk allowed vlan add 38,140 switchport t…</p>
+      <div class="brand-tags"><span class="brand-tag" style="background:#e3f2fd;color:#049fd9">Cisco</span></div>
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#e3f2fd;color:#1565c0">UC</span>
@@ -235,20 +253,11 @@
     </article>
     <article class="card">
       <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-07-18T19:56:01+00:00</span>
+        <span class="badge" style="background:#e3f2fd;color:#1565c0">UC</span>
+        <span class="meta">No Jitter · Wed, 22 Jul 2026 16:00:00 GMT</span>
       </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1v05o0o/voip_solution/" target="_blank" rel="noopener">Voip solution</a></h3>
-      <p class="card-summary">Hi everyone, I am pretty new to this topic and i am really here as i need a solution. Basically i am looking for a device or a software solution to use a simcard as VOIP. To be more precise, i want to use my simcard from my homecountry and have access to calls and sms from anywhere. I saw yeastar but the setup was very complicated. Is there any more simple ways to achieve this like a software on a…</p>
-      
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-07-18T17:47:34+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1v02e5g/sip_provider_and_codec_configuration_for/" target="_blank" rel="noopener">SIP provider and codec configuration for broadcast phone interviews</a></h3>
-      <p class="card-summary">Hi everyone, I&#x27;m setting up a small TV studio and I&#x27;m looking for the best way to bring standard telephone calls into our production. Our setup is: Windows PC running microSIP SIP account Technically everything works, but I&#x27;m disappointed with the audio quality. It sounds noticeably worse than I expected for a modern VoIP setup. My current enabled codecs in MicroSIP are in this order: Opus G.722 G…</p>
+      <h3 class="card-title"><a href="https://www.nojitter.com/digital-workplace/vendors-ship-thousands-of-features-users-adopt-dozens" target="_blank" rel="noopener">Vendors ship thousands of features. Users adopt dozens.</a></h3>
+      <p class="card-summary">UCaaS and CCaaS platforms release hundreds of new features every year. User adoption hasn&#x27;t kept pace and the capability vs. adoption gap is widening.</p>
       
     </article>
   </main>
@@ -298,7 +307,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-07-23 13:23';
+    var originalTime = '2026-07-23 18:57';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
