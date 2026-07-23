@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-07-22 18:56（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-07-23 01:50（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -206,6 +206,15 @@
 
   <main class="container">
     <p class="stats">共聚合 5 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-07-23T00:30:16+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1v3y9bi/looking_for_cisco_79457965_sccp_firmware_852/" target="_blank" rel="noopener">Looking for Cisco 7945/7965 SCCP firmware 8.5.2 (intermediate load) — cmterm-7945_7965-sccp.8-5-2.zip</a></h3>
+      <p class="card-summary">Hi everyone, I&#x27;m trying to upgrade a Cisco 7945G phone that&#x27;s stuck on an older firmware. Based on Cisco&#x27;s release notes, I need to load the intermediate version 8.5(2) before I can upgrade to 9.x, since the phone won&#x27;t accept a direct jump from its current version. Unfortunately my CCO account doesn&#x27;t have download entitlement for this older release, and Cisco&#x27;s software download page rejects the…</p>
+      <div class="brand-tags"><span class="brand-tag" style="background:#e3f2fd;color:#049fd9">Cisco</span></div>
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
@@ -241,15 +250,6 @@
       <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1v02e5g/sip_provider_and_codec_configuration_for/" target="_blank" rel="noopener">SIP provider and codec configuration for broadcast phone interviews</a></h3>
       <p class="card-summary">Hi everyone, I&#x27;m setting up a small TV studio and I&#x27;m looking for the best way to bring standard telephone calls into our production. Our setup is: Windows PC running microSIP SIP account Technically everything works, but I&#x27;m disappointed with the audio quality. It sounds noticeably worse than I expected for a modern VoIP setup. My current enabled codecs in MicroSIP are in this order: Opus G.722 G…</p>
       
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-07-17T23:48:02+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1uzg3t9/ringcentralmitel_485g_custom_ringtone_provisioning/" target="_blank" rel="noopener">RingCentral/Mitel 485G Custom Ringtone Provisioning</a></h3>
-      <p class="card-summary">Does anyone know the configuration file format for a RingCentral firmware converted Mitel 485G? I am trying to provision custom ringtones to the phones. I do not have a RingCentral subscription or tie, I am just using their firmware to connect it to a standard SIP PABX. submitted by /u/Sorry_Crazy5259 [link] [comments]</p>
-      <div class="brand-tags"><span class="brand-tag" style="background:#e3f2fd;color:#01579b">Mitel</span></div>
     </article>
   </main>
 
@@ -298,7 +298,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-07-22 18:56';
+    var originalTime = '2026-07-23 01:50';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
