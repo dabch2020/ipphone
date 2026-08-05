@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-08-05 13:41（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-08-05 19:13（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -206,6 +206,24 @@
 
   <main class="container">
     <p class="stats">共聚合 10 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-08-05T17:42:48+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1vged6m/no_audio_on_sip_calls_behind_cgnat_4g_backup/" target="_blank" rel="noopener">No audio on SIP calls behind CGNAT (4G backup connection)</a></h3>
+      <p class="card-summary">Hi, I have a VoIP issue in a small business environment involving a Yeastar MyPBX and several Yealink phones, caused by a CGNAT situation. The Internet connection switched to a 4G backup link, which is behind CGNAT. SIP signaling works correctly (calls are established successfully), but there is no audio, indicating an RTP/media path issue (according to what I read). To work around the CGNAT limit…</p>
+      <div class="brand-tags"><span class="brand-tag" style="background:#e8f5e9;color:#2e7d32">Yealink</span></div>
+    </article>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-08-05T17:14:30+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1vgdkc4/mobile_sip_client_leaves_stale_registrations/" target="_blank" rel="noopener">Mobile SIP client leaves stale registrations behind on every app launch — how do you deal with multiple bindings on one credential?</a></h3>
+      <p class="card-summary">Note: Yes, I&#x27;m using AI to write this post because English is not my first language and I want to state my problem as clear as possible. Hitting a problem I suspect is common for anyone doing mobile VoIP, and I&#x27;d like to know how others have solved it. **Setup** - I&#x27;m using Telnyx. - React Native app, WebRTC SIP client, iOS and Android. I&#x27;m using Telnyx. - One shared SIP credential for a group of …</p>
+      
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
@@ -272,28 +290,10 @@
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-08-03T14:28:44+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1vef12h/analog_trunk_routes_between_2_pbx/" target="_blank" rel="noopener">Analog trunk routes between 2 PBX</a></h3>
-      <p class="card-summary">I have 2 Grandstream UCM2600 series PBX, in two different locations PBX-a and PBX-b. One location will temporarily close so I want to route the calls from PBX-a to PBX-b. We have analog trunks, in the process of migrating to fiber. The SIP connection between PBX already exists so I can place calls from a to b and vice versa. What I want to achieve is the following route analog trunk calls from PBX…</p>
-      
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
         <span class="meta">Reddit r/VOIP · 2026-08-01T00:00:51+00:00</span>
       </div>
       <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1vc7m48/monthly_requests_thread/" target="_blank" rel="noopener">Monthly Requests Thread</a></h3>
       <p class="card-summary">Looking for a VoIP solution but don&#x27;t know where to start? Ask here! Please not that standalone advertisements are not permitted. All top-level comments must be requests for a product or service. Absolutely no soliciting. Do not ask anyone to DM you, or DM others for any reason. If you want someone to use your services, post a link to your website. This post will be replaced by a new one at 00:00 …</p>
-      
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#e3f2fd;color:#1565c0">UC</span>
-        <span class="meta">No Jitter · Thu, 30 Jul 2026 13:58:56 GMT</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.nojitter.com/contact-centers/contactspace-zoom-partner-to-bring-enterprise-outbound-to-zoom-contact-center" target="_blank" rel="noopener">contactSPACE, Zoom partner to bring enterprise outbound to Zoom Contact Center</a></h3>
-      <p class="card-summary">Zoom CX compliant customers will soon have call campaign management through a cloud-native platform.</p>
       
     </article>
   </main>
@@ -343,7 +343,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-08-05 13:41';
+    var originalTime = '2026-08-05 19:13';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
