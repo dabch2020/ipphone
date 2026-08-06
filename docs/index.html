@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-08-06 13:39（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-08-06 23:48（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -205,7 +205,16 @@
   </div>
 
   <main class="container">
-    <p class="stats">共聚合 8 条新闻</p>
+    <p class="stats">共聚合 7 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-08-06T14:34:08+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1vh5ziu/yealink_ax83h_provisioning/" target="_blank" rel="noopener">Yealink AX83H Provisioning</a></h3>
+      <p class="card-summary">Hello! I am trying to add a pair of AX83H wi-fi IP phones to my GOTO Connect/Jive PBX. I have them added to the devices page, I have them connected to the wifi, but am failing to get them provisioned. I can access the USER web interface, however I cannot for the life of me log in to the Admin portal to try and provision that way. I have tried admin/admin, admin/device password from the goto portal…</p>
+      <div class="brand-tags"><span class="brand-tag" style="background:#e8f5e9;color:#2e7d32">Yealink</span></div>
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#e3f2fd;color:#1565c0">UC</span>
@@ -223,15 +232,6 @@
       <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1vguo9c/ucaas_or_cpaas_im_confused/" target="_blank" rel="noopener">UCaaS or CPaaS? I&#x27;m confused.</a></h3>
       <p class="card-summary">We are a small(ish) business that&#x27;s growing pretty fast. We need more than VoIP bc we are starting to text and that&#x27;s getting expensive. And it&#x27;s not integrated with our CRM. We use Zoom for video calls with clients but it&#x27;s not connected to our internal systems. Seems like we have a different system for everything when it comes to communicating. I&#x27;ve searched UCaaS and CPaaS but not sure which is…</p>
       
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-08-05T17:42:48+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1vged6m/no_audio_on_sip_calls_behind_cgnat_4g_backup/" target="_blank" rel="noopener">No audio on SIP calls behind CGNAT (4G backup connection)</a></h3>
-      <p class="card-summary">Hi, I have a VoIP issue in a small business environment involving a Yeastar MyPBX and several Yealink phones, caused by a CGNAT situation. The Internet connection switched to a 4G backup link, which is behind CGNAT. SIP signaling works correctly (calls are established successfully), but there is no audio, indicating an RTP/media path issue (according to what I read). To work around the CGNAT limit…</p>
-      <div class="brand-tags"><span class="brand-tag" style="background:#e8f5e9;color:#2e7d32">Yealink</span></div>
     </article>
     <article class="card">
       <div class="card-header">
@@ -259,15 +259,6 @@
       <h3 class="card-title"><a href="https://www.nojitter.com/contact-centers/avaya-hires-new-ceo" target="_blank" rel="noopener">Avaya hires new CEO</a></h3>
       <p class="card-summary">Jeff Clarke will become Avaya’s third CEO in four years, as Patrick Dennis transitions to executive chair.</p>
       <div class="brand-tags"><span class="brand-tag" style="background:#ffebee;color:#c62828">Avaya</span></div>
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#e3f2fd;color:#1565c0">UC</span>
-        <span class="meta">No Jitter · Mon, 03 Aug 2026 16:00:00 GMT</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.nojitter.com/customer-experience/the-guest-agent-problem-is-coming-to-enterprise-collaboration" target="_blank" rel="noopener">The guest agent problem is coming to enterprise collaboration</a></h3>
-      <p class="card-summary">UC and security leaders must prepare for external AI agents by combining verifiable identity, ephemeral access and automated cross-company governance.</p>
-      
     </article>
     <article class="card">
       <div class="card-header">
@@ -325,7 +316,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-08-06 13:39';
+    var originalTime = '2026-08-06 23:48';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
