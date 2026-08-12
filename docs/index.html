@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-08-12 01:02（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-08-12 07:06（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -205,7 +205,25 @@
   </div>
 
   <main class="container">
-    <p class="stats">共聚合 7 条新闻</p>
+    <p class="stats">共聚合 9 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-08-12T06:40:01+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1vm6e8f/cloud_hosted_voip_cant_see_anything_in_wireshark/" target="_blank" rel="noopener">Cloud hosted VoIP, can&#x27;t see anything in Wireshark, is TLS blocking me?</a></h3>
+      <p class="card-summary">New to VoIP troubleshooting. Tried to set up Wireshark yesterday to look at SIP/RTP traffic on our Mitel system, filtered for SIP and got literally nothing. Looked into it a bit and think it&#x27;s because our system is cloud hosted, so SIP runs over TLS which encrypts it? So I can&#x27;t see inside it the normal way, is that right? Or am I filtering/looking at it wrong in Wireshark? Anyone actually work wi…</p>
+      <div class="brand-tags"><span class="brand-tag" style="background:#e3f2fd;color:#01579b">Mitel</span></div>
+    </article>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-08-12T02:57:07+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1vm26vl/only_forwarding_system_no_app_used_for_calls/" target="_blank" rel="noopener">Only forwarding system? No app used for calls ?</a></h3>
+      <p class="card-summary">I have a restaurant that i am opening soon. I need a desk phone (with no app needed to be installed to make calls), just simple answer or dial to make a call. On the other hand, i need the customers when they call, to be asked (press 1 to make a reservation/ order to be routed to the restaurant. Press 2 to speak to manager or talk about a private event (which it needs to forwarding them to my cell…</p>
+      
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
@@ -316,7 +334,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-08-12 01:02';
+    var originalTime = '2026-08-12 07:06';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
