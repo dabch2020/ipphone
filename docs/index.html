@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-08-18 18:21（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-08-19 00:37（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -206,6 +206,15 @@
 
   <main class="container">
     <p class="stats">共聚合 11 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-08-18T21:50:44+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1vs36j8/crexnedo_voip_brief_outage/" target="_blank" rel="noopener">Crexnedo VOIP brief outage</a></h3>
+      <p class="card-summary">Crexendo service was down briefly on August 13th. I asked techsupport for a root cause report. The ticket was created, but to date there has been no reply to my request. Their tech support was unreachable, and so was their entire site. Did anyone else experience this? submitted by /u/Impressive-Arm-6345 [link] [comments]</p>
+      
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#e3f2fd;color:#1565c0">UC</span>
@@ -296,15 +305,6 @@
       <p class="card-summary">Context: automotive industry with 3CX as the primary PBX. TL;DR - call deliverability is a problem because of staff not answering calls and reporting startups are harvesting our money. Do I look at a turnkey solution for the industry, look at a higher generic UCaaS than 3CX, or look at a whitelabel solution like Wazo Platform? We&#x27;re running into a struggle right now with our management - 3CX isn&#x27;t…</p>
       
     </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-08-13T19:18:26+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1vnkg3a/my_voip_provider_says_no_mms_for_my_tollfree/" target="_blank" rel="noopener">My VOIP provider says: no MMS for my toll-free number. But the number&#x27;s CLEC says it&#x27;s available.</a></h3>
-      <p class="card-summary">Note: I said CLEC in the title, then realized that for a toll-free number, the correct term is RESPORG. I can&#x27;t edit the title, but I made the substitution below. My large VOIP provider offers SMS and MMS messaging for regular phone numbers. For toll-free numbers, they offer only SMS: no MMS. They told me that their upstream carrier doesn&#x27;t allow MMS on toll-free numbers, so they can&#x27;t enable MMS …</p>
-      
-    </article>
   </main>
 
   <footer>
@@ -352,7 +352,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-08-18 18:21';
+    var originalTime = '2026-08-19 00:37';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
