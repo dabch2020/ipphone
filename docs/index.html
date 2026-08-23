@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-08-22 18:14（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-08-23 00:40（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -206,6 +206,15 @@
 
   <main class="container">
     <p class="stats">共聚合 6 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-08-22T20:53:33+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1vvnnem/groundwire_voip_app_offers_selection_of_190_voip/" target="_blank" rel="noopener">Groundwire VOIP app offers selection of 190 VOIP providers</a></h3>
+      <p class="card-summary">In the iPhone version of the Groundwire VOIP app, the ADD ACCOUNT page lists about 190 VOIP providers to choose from. I&#x27;ve heard of only a few of them. Some have gone out of business or changed their name or been folded into another brand. Many cater to businesses only or are outside North America. The list is here: https://drive.google.com/file/d/1SVV7zcigr4xNxtdrbYEhRv7YOL10XiXJ/view If you have…</p>
+      
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
@@ -241,15 +250,6 @@
       <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1vswwmo/cisco_8851_3pcc/" target="_blank" rel="noopener">Cisco 8851 3pcc</a></h3>
       <p class="card-summary">Hello, I&#x27;m trying to get some Cisco 8851&#x27;s and 9841s working with on a 3rd party platform. I have them registered and making calls and most features seems to work, but no matter how I change the xml config, the phone cannot use the decline softkey when a call rings in. On Wireshark I see a fragmented udp packet which seems to possibly point to it still using Cisco remotecc. Has anyone else ever us…</p>
       <div class="brand-tags"><span class="brand-tag" style="background:#e3f2fd;color:#049fd9">Cisco</span></div>
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-08-19T14:24:33+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1vsnxh0/voip_over_starlink_share_real_experiences_please/" target="_blank" rel="noopener">VoIP over Starlink? Share real experiences please.</a></h3>
-      <p class="card-summary">As we pickup after Lala, I am curious what the real life experience with Starlink has been supporting VoIP. I understand latency, jitter, and packet loss are going to be factors. The question is, can 1 or 2 calls of short duration be reasonably supported in an emergency situation if no other connection is available? Even at the worst case, with the mobile app the VoIP provider offers, I would have…</p>
-      
     </article>
     <article class="card">
       <div class="card-header">
@@ -307,7 +307,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-08-22 18:14';
+    var originalTime = '2026-08-23 00:40';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
