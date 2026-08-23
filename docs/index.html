@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-08-23 00:40（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-08-23 06:22（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -206,6 +206,15 @@
 
   <main class="container">
     <p class="stats">共聚合 6 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-08-23T05:10:57+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1vvy4ik/free_voip_chat_conference_no_ads_just_talk/" target="_blank" rel="noopener">Free VOIP Chat Conference - No ads, just talk</a></h3>
+      <p class="card-summary">Hello All, I&#x27;ve thrown together my first attempt at FreePBX that answers phone calls and immediately forwards the callers into a conference group chat. It&#x27;s VERY basic and free. It&#x27;s non-commercial - no ads, no profit, nothing but voice chat. If anyone wants to talk with others on it, give it a try! Note that you&#x27;ll be making a call to the east coast, so research first to learn if you&#x27;ll be making…</p>
+      
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
@@ -241,15 +250,6 @@
       <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1vtuyaw/porting_numbers_between_carriers_how_does_my/" target="_blank" rel="noopener">Porting numbers between carriers. How does my financial institution know if it&#x27;s a Voip vs non-Voip provider?</a></h3>
       <p class="card-summary">Total noob here so I apologize in advance if my question is dumb, if I use wrong terminology, or if my post isn&#x27;t deemed appropriate for this subreddit. I am currently living outside the USA but still have accounts with US financial institutions and government agencies. Many of these institutions use multifactor authentication for additional security and some require that MFA codes be sent to a no…</p>
       
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-08-19T19:43:27+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1vswwmo/cisco_8851_3pcc/" target="_blank" rel="noopener">Cisco 8851 3pcc</a></h3>
-      <p class="card-summary">Hello, I&#x27;m trying to get some Cisco 8851&#x27;s and 9841s working with on a 3rd party platform. I have them registered and making calls and most features seems to work, but no matter how I change the xml config, the phone cannot use the decline softkey when a call rings in. On Wireshark I see a fragmented udp packet which seems to possibly point to it still using Cisco remotecc. Has anyone else ever us…</p>
-      <div class="brand-tags"><span class="brand-tag" style="background:#e3f2fd;color:#049fd9">Cisco</span></div>
     </article>
     <article class="card">
       <div class="card-header">
@@ -307,7 +307,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-08-23 00:40';
+    var originalTime = '2026-08-23 06:22';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
