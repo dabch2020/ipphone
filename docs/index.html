@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-08-23 18:13（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-08-24 00:39（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -206,6 +206,15 @@
 
   <main class="container">
     <p class="stats">共聚合 6 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-08-23T22:05:52+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1vwkguc/can_i_connect_my_cell_phone_to_my_voip_network/" target="_blank" rel="noopener">Can I connect my cell phone to my VoIP network?</a></h3>
+      <p class="card-summary">For context, I have a very small VoIP network in my home. Literally just a house phone with an ATA that I can dial via IP from my PC. I’m wondering if there’s a way to make it so when my cell phone rings, my VoIP phone rings as well. This would ideally have to be done locally. Without having to rely on other servers, paying for a subscription, or completely changing my cellular provider. I always …</p>
+      
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
@@ -241,15 +250,6 @@
       <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1vtuyaw/porting_numbers_between_carriers_how_does_my/" target="_blank" rel="noopener">Porting numbers between carriers. How does my financial institution know if it&#x27;s a Voip vs non-Voip provider?</a></h3>
       <p class="card-summary">Total noob here so I apologize in advance if my question is dumb, if I use wrong terminology, or if my post isn&#x27;t deemed appropriate for this subreddit. I am currently living outside the USA but still have accounts with US financial institutions and government agencies. Many of these institutions use multifactor authentication for additional security and some require that MFA codes be sent to a no…</p>
       
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-08-19T19:43:27+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1vswwmo/cisco_8851_3pcc/" target="_blank" rel="noopener">Cisco 8851 3pcc</a></h3>
-      <p class="card-summary">Hello, I&#x27;m trying to get some Cisco 8851&#x27;s and 9841s working with on a 3rd party platform. I have them registered and making calls and most features seems to work, but no matter how I change the xml config, the phone cannot use the decline softkey when a call rings in. On Wireshark I see a fragmented udp packet which seems to possibly point to it still using Cisco remotecc. Has anyone else ever us…</p>
-      <div class="brand-tags"><span class="brand-tag" style="background:#e3f2fd;color:#049fd9">Cisco</span></div>
     </article>
     <article class="card">
       <div class="card-header">
@@ -307,7 +307,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-08-23 18:13';
+    var originalTime = '2026-08-24 00:39';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
