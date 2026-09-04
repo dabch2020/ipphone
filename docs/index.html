@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-09-04 15:24（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-09-04 20:00（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -205,7 +205,16 @@
   </div>
 
   <main class="container">
-    <p class="stats">共聚合 7 条新闻</p>
+    <p class="stats">共聚合 6 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-09-04T19:17:08+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1w7dxp0/trunk_issue_after_upgradeing_to_unifi_router/" target="_blank" rel="noopener">Trunk issue after upgradeing to unifi router</a></h3>
+      <p class="card-summary">I recently upgraded from my provider issued router to UCG Ultra, SIP registrations on the provider&#x27;s router were working flawlessly but since changing the router to Unifi my SIP trunks in FreePBX display rejected state and asterisk console prints out [2026-09-04 21:11:51] WARNING[1602]: res_pjsip_outbound_registration.c:1250 schedule_retry: No response received from &#x27;sip:sip.halonet.pl:5060&#x27; on re…</p>
+      
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
@@ -235,30 +244,12 @@
     </article>
     <article class="card">
       <div class="card-header">
-        <span class="badge" style="background:#e3f2fd;color:#1565c0">UC</span>
-        <span class="meta">No Jitter · Mon, 31 Aug 2026 14:12:38 GMT</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.nojitter.com/ai-automation/collaboration-between-it-and-business-teams-is-the-key-to-ai-success" target="_blank" rel="noopener">Collaboration between IT and business teams is the key to AI success</a></h3>
-      <p class="card-summary">However, challenges with ownership, data access and governance still stand in the way.</p>
-      
-    </article>
-    <article class="card">
-      <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
         <span class="meta">Reddit r/VOIP · 2026-08-30T17:25:00+00:00</span>
       </div>
       <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1w2nle6/poly_directory_integration_freepbx/" target="_blank" rel="noopener">Poly Directory Integration - FreePBX</a></h3>
       <p class="card-summary">I&#x27;m provisioning my Poly voice endpoints via Poly Lens. PBX is latest FreePBX 17. Is there a way that I can integrate the system directory with the phones? Has anyone been able to achieve something like this in the past? submitted by /u/CagedMonkey97 [link] [comments]</p>
       <div class="brand-tags"><span class="brand-tag" style="background:#f3e5f5;color:#7b1fa2">Poly</span></div>
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-08-30T01:38:05+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1w246yz/voip_outbound_is_native_ai_setups_getting_good/" target="_blank" rel="noopener">VoIP outbound: Is native AI setups getting good sales right now, or is it still all old-school?</a></h3>
-      <p class="card-summary">I’ve been doing remote outbound appointment setting and sales for VoIP companies for a while now across the US, targeting mostly SMBs. As I am now done with my last contract and looking for another company to go for, what I&#x27;m trying to figure out is what should be my next move because the whole market feels different right now. To clarify upfront: I do all my cold calling and outreach manually (hu…</p>
-      
     </article>
     <article class="card">
       <div class="card-header">
@@ -316,7 +307,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-09-04 15:24';
+    var originalTime = '2026-09-04 20:00';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
