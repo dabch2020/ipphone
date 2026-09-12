@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-09-12 02:05（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-09-12 09:45（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -206,6 +206,15 @@
 
   <main class="container">
     <p class="stats">共聚合 8 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-09-12T03:11:44+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1we12tx/trying_to_get_voipms_sms_client_working_but/" target="_blank" rel="noopener">Trying to get voip.ms SMS client working, but having no luck</a></h3>
+      <p class="card-summary">VOIP.ms SMS app - trying to get it working ... Hi everybody: New to VOIP.ms and trying to get the VOIP.ms SMS app to work, but I&#x27;m not having much luck. I&#x27;m seeing constant sync failed messages popping up on the bottom of the Android app screen. If I try to pull a manual sync, I just get a spinning circle. I can receive messages, but sending messages is sporadic. I&#x27;ve turned on the API in the port…</p>
+      
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#e3f2fd;color:#1565c0">UC</span>
@@ -240,15 +249,6 @@
       </div>
       <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1wd2xqe/how_does_obihai_handle_text_messages_w_voipms_or/" target="_blank" rel="noopener">How does Obihai handle text messages w/ voip.ms or Telnyx</a></h3>
       <p class="card-summary">I&#x27;m wanting to setup a Obihai + regular phone for my grandma. She can use a cell phone, but she often forgets to charge it up, etc and can&#x27;t be reached. So wanted a regular phone as a backup. I was wondering how Obihai users handle text messages to the phone number? Do you have to basically install a SIP phone app that works with voip.ms or telnyx in order to view those text messages? Otherwise, t…</p>
-      
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-09-10T17:32:05+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1wcpvey/fixing_or_overriding_callerid/" target="_blank" rel="noopener">Fixing or overriding caller-ID</a></h3>
-      <p class="card-summary">I moved to 1-Voip due to unreliability of another provider. However, one lacking feature is that Caller-ID data is inaccurate, or very stale (&gt;10-yrs). Is there a way to me to override Caller-ID info to newer, or own personal value? Prior supplier allowed voip contact list entry to override caller-ID. submitted by /u/spookyZn2 [link] [comments]</p>
       
     </article>
     <article class="card">
@@ -325,7 +325,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-09-12 02:05';
+    var originalTime = '2026-09-12 09:45';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
