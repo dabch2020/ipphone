@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-09-15 15:53（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-09-15 20:37（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -205,7 +205,25 @@
   </div>
 
   <main class="container">
-    <p class="stats">共聚合 7 条新闻</p>
+    <p class="stats">共聚合 8 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-09-15T19:05:49+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1wh9mry/best_way_to_connect_isp_voip_directly_to_a_ucm/" target="_blank" rel="noopener">Best way to connect ISP VoIP directly to a UCM IP-PBX?</a></h3>
+      <p class="card-summary">Hi, Our ISP currently provides VoIP directly through their ONT/router. The VoIP service uses a dedicated WAN VLAN with DHCP, separate from the Internet connection. We want to centralize all telephony on a Grandstream UCM6510, with Fanvil phones on our own internal Voice VLAN. What would be the cleanest approach? SIP trunk directly from the ISP to the UCM? Pass the ISP&#x27;s VoIP VLAN through to the UC…</p>
+      
+    </article>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#e8f5e9;color:#2e7d32">企业</span>
+        <span class="meta">TechTarget UC · Tue, 15 Sep 2026 16:09:00 GMT</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.computerweekly.com/news/366649998/Cisco-users-urged-to-patch-email-gateway-flaw" target="_blank" rel="noopener">Cisco users urged to patch email gateway flaw</a></h3>
+      <p class="card-summary">&lt;p&gt;Cisco is urging defenders to get out in front of a highly-dangerous flaw in its Secure Email Gateway (SEG) appliance, &lt;a href=&quot;https://nvd.nist.gov/vuln/detail/cve-2026-76461&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;CVE-2026-76461&lt;/a&gt; that could enable an unauthenticated, remote attacker to gain the ability to execute arbitrary commands with root privileges.&lt;/p&gt; &lt;p&gt;Listed on the US’ Cybersecurity and In…</p>
+      <div class="brand-tags"><span class="brand-tag" style="background:#e3f2fd;color:#049fd9">Cisco</span></div>
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
@@ -213,15 +231,6 @@
       </div>
       <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1wh2g36/snom_d785_not_working_behind_firewall/" target="_blank" rel="noopener">SNOM D785 not working behind firewall</a></h3>
       <p class="card-summary">Hi everyone, I&#x27;ve recently moved my office to a larger building and am trying to set up a VOIP call center. The phones are SNOM D785, and they work just fine when connected straight to the modem/router. However, when I connect them behind my firewall they fail to register. Vodafone is being super uncooperative and my IT support company has already charged me ~350€ and one passes the ball to the ot…</p>
-      
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#e8f5e9;color:#2e7d32">企业</span>
-        <span class="meta">TechTarget UC · Tue, 15 Sep 2026 09:13:00 GMT</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.computerweekly.com/news/366650453/SES-deepens-collaboration-to-advance-direct-to-device-services" target="_blank" rel="noopener">SES deepens collaboration to advance direct-to-device services</a></h3>
-      <p class="card-summary">&lt;p&gt;Hot on the heels of launching additional O3b mPower satellites to complete its constellation and strengthen performance, resiliency and reach of its medium Earth orbit (MEO) network, space operator SES has expanded its collaboration with Elveo Mobile to accelerate delivery of direct-to-device (D2D) services in Europe.&lt;/p&gt; &lt;p&gt;&lt;a title=&quot;https://url.us.m.mimecastprotect.com/s/05BXCM8E9pHv2OxB2cPFZ…</p>
       
     </article>
     <article class="card">
@@ -316,7 +325,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-09-15 15:53';
+    var originalTime = '2026-09-15 20:37';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
