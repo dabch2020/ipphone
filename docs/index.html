@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-09-21 11:24（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-09-21 17:23（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -205,7 +205,16 @@
   </div>
 
   <main class="container">
-    <p class="stats">共聚合 8 条新闻</p>
+    <p class="stats">共聚合 9 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-09-21T11:55:16+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1wman2i/using_my_pc_as_my_home_landline_phone_via_voipsip/" target="_blank" rel="noopener">Using my PC as my home landline phone via VoIP/SIP – is this possible?</a></h3>
+      <p class="card-summary">I recently realized that my home landline seems to be VoIP, because when I turn off my ISP router, the landline phone stops working. This got me thinking: since the router is apparently handling the voice service, would it be possible to use my PC as the landline phone instead? Basically, I would like to achieve something like: Mobile phone → call my home landline number → VoIP/SIP → PC → micropho…</p>
+      
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
@@ -325,7 +334,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-09-21 11:24';
+    var originalTime = '2026-09-21 17:23';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
