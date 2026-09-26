@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-09-26 10:29（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-09-26 15:20（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -206,6 +206,15 @@
 
   <main class="container">
     <p class="stats">共聚合 8 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-09-26T10:31:17+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1wqn73t/opensource_tool_to_regressiontest_and_loadtest_a/" target="_blank" rel="noopener">Open-source tool to regression-test and load-test a PBX: caller ID, transfers, hold, check audio</a></h3>
+      <p class="card-summary">Every PBX release I&#x27;ve tested looked the same: a checklist of a few hundred call scenarios and people with phones. Call B, check the caller ID, say &quot;hello&quot;, transfer to C, tick the box. SIPp helps with load, but writing each side of a transfer as separate XML scenarios is painful, and &quot;did the person actually hear anything&quot; is the question that matters most. I built xk6-sip, an open-source extensi…</p>
+      
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
@@ -250,15 +259,6 @@
       <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1wpchw9/fritzbox_5690_notifications_for_missed_calls_and/" target="_blank" rel="noopener">FRITZ!Box 5690 – notifications for missed calls and voicemail</a></h3>
       <p class="card-summary">​ We have a FRITZ!Box 5690 set up for VoIP/landline telephony, with a Gigaset DX800A IP phone connected to it. The problem is that missed calls and new voicemail/answering-machine messages are only visible through the FRITZ!Box web interface. The Gigaset doesn&#x27;t properly show them. We have already installed both FRITZ!App Fon and MyFRITZ!App on Android, but neither gives us a push notification whe…</p>
       
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-09-24T13:28:08+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1wp1na5/yealink_t54w_bricked/" target="_blank" rel="noopener">Yealink T54W Bricked</a></h3>
-      <p class="card-summary">Please help, i have the recovery for the device, tried version 96.85.188.3, 96.86.188.12 Tried all format types, tried 10 differnt USBs, every time i get error: update failed -1 submitted by /u/kell96kell [link] [comments]</p>
-      <div class="brand-tags"><span class="brand-tag" style="background:#e8f5e9;color:#2e7d32">Yealink</span></div>
     </article>
     <article class="card">
       <div class="card-header">
@@ -325,7 +325,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-09-26 10:29';
+    var originalTime = '2026-09-26 15:20';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
