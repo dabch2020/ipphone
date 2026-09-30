@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-09-30 02:56（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-09-30 11:33（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -205,7 +205,16 @@
   </div>
 
   <main class="container">
-    <p class="stats">共聚合 7 条新闻</p>
+    <p class="stats">共聚合 6 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-09-30T05:08:12+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1wtwbky/testing_that_callers_actually_hear_each_other_on/" target="_blank" rel="noopener">Testing that callers actually hear each other on Asterisk under load: voice quality checks in xk6-sip</a></h3>
+      <p class="card-summary">200 OK tells you the PBX connected the call. It doesn&#x27;t tell you anyone can hear anything. Media server port exhaustion, NAT rules, a B2BUA bridging the wrong legs, transcoding pegging the CPU: all of these give you calls with perfect signalling and silence, someone else&#x27;s voice, or garbled audio. Most PBX load tests (SIPp included) count RTP packets at best. I maintain xk6-sip, an open-source k6 …</p>
+      
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
@@ -240,24 +249,6 @@
       </div>
       <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1wsewts/webrtc_providers_that_use_opus_or_silk_will/" target="_blank" rel="noopener">webrtc providers that use opus or silk will always be be robust than SIP?</a></h3>
       <p class="card-summary">Opus is lower bitrate than g711, and and has the option it turn on FEC for packet loss zoom is apparently even more impressive, it can repair up to 2 consecutive packets even before PLC is needed via SILK LBRR. so it safe to say these non-Pstn oriented apps will always beat regular SIP phone calls over a congested 4G link? submitted by /u/clon3man [link] [comments]</p>
-      
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-09-26T10:31:17+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1wqn73t/opensource_tool_to_regressiontest_and_loadtest_a/" target="_blank" rel="noopener">Open-source tool to regression-test and load-test a PBX: caller ID, transfers, hold, check audio</a></h3>
-      <p class="card-summary">Every PBX release I&#x27;ve tested looked the same: a checklist of a few hundred call scenarios and people with phones. Call B, check the caller ID, say &quot;hello&quot;, transfer to C, tick the box. SIPp helps with load, but writing each side of a transfer as separate XML scenarios is painful, and &quot;did the person actually hear anything&quot; is the question that matters most. I built xk6-sip, an open-source extensi…</p>
-      
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-09-25T17:36:28+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1wq2msh/i_replaced_press_1_for_sales_2_for_support_with/" target="_blank" rel="noopener">I replaced &quot;press 1 for sales, 2 for support&quot; with Jev</a></h3>
-      <p class="card-summary">Hy everyone, I built a lightweight router using TypeSafe&#x27;s Jev model. callers speak naturally (&quot;Hello, I&#x27;d like to speak to someone&quot;) Jev classifies intent in ~150ms and return confidence score The PBX routes the call to the exact queue, department or extension If confidence drops below 0.7 or anything fails, it falls back to an operator. here is the github repo submitted by /u/Correct-Ad4910 [lin…</p>
       
     </article>
     <article class="card">
@@ -316,7 +307,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-09-30 02:56';
+    var originalTime = '2026-09-30 11:33';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
