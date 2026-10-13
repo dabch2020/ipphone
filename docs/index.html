@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-10-13 13:08（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-10-13 22:04（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -205,7 +205,16 @@
   </div>
 
   <main class="container">
-    <p class="stats">共聚合 2 条新闻</p>
+    <p class="stats">共聚合 3 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-10-13T13:57:52+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1x4xd86/porting_a_bunch_of_yealink_phones_tomorrow_advice/" target="_blank" rel="noopener">Porting a bunch of YeaLink phones tomorrow, advice welcomed!</a></h3>
+      <p class="card-summary">Firing Phone.com for Nextiva, I&#x27;ve got a port scheduled for tomorrow morning and a conference call with the Nextiva onboarding tech, but I&#x27;m going to have to configure a bunch of Yealink phones for their systems and I have no idea what I&#x27;m doing. The models are mostly T53W&#x27;s with a couple old T21PE2&#x27;s and a single T43U scattered across three offices. I&#x27;ve already sent the tech all the MAC addresse…</p>
+      <div class="brand-tags"><span class="brand-tag" style="background:#e8f5e9;color:#2e7d32">Yealink</span></div>
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
@@ -271,7 +280,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-10-13 13:08';
+    var originalTime = '2026-10-13 22:04';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
