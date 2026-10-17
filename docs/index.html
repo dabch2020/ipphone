@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-10-17 02:04（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-10-17 09:52（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -205,7 +205,16 @@
   </div>
 
   <main class="container">
-    <p class="stats">共聚合 2 条新闻</p>
+    <p class="stats">共聚合 3 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-10-17T02:48:29+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1x7z8cv/freepbx_traditional_chinese_language_pack_78/" target="_blank" rel="noopener">FreePBX Traditional Chinese Language Pack — 78 modules, hand-translated (not zh-CN converted)</a></h3>
+      <p class="card-summary">FreePBX still ships with no official Traditional Chinese interface. If you&#x27;ve administered a FreePBX box for a zh-TW client, you know the pain: stuck between English and Simplified Chinese — and Simplified brings its own landmines (点击, 阈值, 实现…). So I built a proper language pack: Hand-translated, not converted. Every string — labels, tooltips, error messages — rewritten for zh-TW conventions. 78 m…</p>
+      
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
@@ -271,7 +280,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-10-17 02:04';
+    var originalTime = '2026-10-17 09:52';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
