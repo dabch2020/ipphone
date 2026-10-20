@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-10-20 16:00（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-10-20 20:59（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -205,7 +205,25 @@
   </div>
 
   <main class="container">
-    <p class="stats">共聚合 3 条新闻</p>
+    <p class="stats">共聚合 5 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-10-20T19:21:13+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1xb1h6d/att_att_voip_number_activation_help/" target="_blank" rel="noopener">ATT (AT&amp;T) VOIP number activation help!</a></h3>
+      <p class="card-summary">So there is this number that is currently not taken, and I want to activate it but literally don’t know where to start when I get more info on the number. It says it’s an TCG-AT&amp;TBusinessVOIPwireline from and owned by TELEPORT COMMUNICATIONS AMERICA (AT&amp;T) please help if you could submitted by /u/8000008_ [link] [comments]</p>
+      
+    </article>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-10-20T18:59:38+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1xb0w3w/telnyx_presenting_the_connected_partys_number_as/" target="_blank" rel="noopener">Telnyx: presenting the connected party&#x27;s number as caller ID on a transfer leg (outbound-originated call) — has anyone actually gotten past D51?</a></h3>
+      <p class="card-summary">Setup: outbound dialer on Telnyx Call Control. We dial a customer (our DID as caller ID), they answer, and when they qualify we transfer the live call to our call center&#x27;s DID. We want the transfer leg to present the customer&#x27;s own number as caller ID — standard diverted-call behavior, so the receiving dialer screen-pops the right person. The customer is live on the call at the moment of transfer,…</p>
+      
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
@@ -280,7 +298,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-10-20 16:00';
+    var originalTime = '2026-10-20 20:59';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
