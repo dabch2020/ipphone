@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-10-22 02:24（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-10-22 10:49（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -205,7 +205,16 @@
   </div>
 
   <main class="container">
-    <p class="stats">共聚合 6 条新闻</p>
+    <p class="stats">共聚合 4 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-10-22T09:37:17+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1xce0ub/voip_calls_through_the_mudi_7_sim_cards_using/" target="_blank" rel="noopener">VoIP calls through the Mudi 7 SIM cards using Linphone and Asterisk PBX</a></h3>
+      <p class="card-summary">I&#x27;ve been working on a project for the GL.iNet Mudi 7 (GL-E5800), and I wanted to share what I&#x27;ve managed to achieve so far. The biggest accomplishment is turning the Mudi 7 into a VoIP cellular gateway. I can now make and receive calls through either SIM card using Linphone on my phone or computer, without an external SIP provider. I&#x27;ve also integrated Asterisk PBX, which opens up quite a few pos…</p>
+      
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
@@ -231,33 +240,6 @@
       </div>
       <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1xbc104/is_there_any_hope_long_mms/" target="_blank" rel="noopener">Is there any hope? (Long MMS)</a></h3>
       <p class="card-summary">I never thought this would be such a frustrating experience, but this is proving to be far more difficult than I thought it would be. I have three DIDs, two SIP phones, and two Android devices, and I&#x27;m trying to get them all to live happily ever after under a PBX. I&#x27;m looking for an integrated app that can handle phone calls and messaging between all three DIDs. It doesn&#x27;t have to be fancy. It jus…</p>
-      
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-10-20T21:46:05+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1xb56nt/check_out_lot_of_2_polycom_realpresence_trio_8800/" target="_blank" rel="noopener">Check out Lot Of 2 Polycom RealPresence Trio 8800 &amp; 8500 Conference Phone on eBay!</a></h3>
-      <p class="card-summary">submitted by /u/Any_Ad_8393 [link] [comments]</p>
-      <div class="brand-tags"><span class="brand-tag" style="background:#f3e5f5;color:#7b1fa2">Poly</span> <span class="brand-tag" style="background:#f3e5f5;color:#7b1fa2">Polycom</span></div>
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-10-20T19:21:13+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1xb1h6d/att_att_voip_number_activation_help/" target="_blank" rel="noopener">ATT (AT&amp;T) VOIP number activation help!</a></h3>
-      <p class="card-summary">So there is this number that is currently not taken, and I want to activate it but literally don’t know where to start when I get more info on the number. It says it’s an TCG-AT&amp;TBusinessVOIPwireline from and owned by TELEPORT COMMUNICATIONS AMERICA (AT&amp;T) please help if you could submitted by /u/8000008_ [link] [comments]</p>
-      
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-10-20T18:59:38+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1xb0w3w/telnyx_presenting_the_connected_partys_number_as/" target="_blank" rel="noopener">Telnyx: presenting the connected party&#x27;s number as caller ID on a transfer leg (outbound-originated call) — has anyone actually gotten past D51?</a></h3>
-      <p class="card-summary">Setup: outbound dialer on Telnyx Call Control. We dial a customer (our DID as caller ID), they answer, and when they qualify we transfer the live call to our call center&#x27;s DID. We want the transfer leg to present the customer&#x27;s own number as caller ID — standard diverted-call behavior, so the receiving dialer screen-pops the right person. The customer is live on the call at the moment of transfer,…</p>
       
     </article>
   </main>
@@ -307,7 +289,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-10-22 02:24';
+    var originalTime = '2026-10-22 10:49';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
