@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-11-05 13:41（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-11-05 23:00（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -206,6 +206,15 @@
 
   <main class="container">
     <p class="stats">共聚合 7 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-11-05T21:01:50+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1xou6hb/downside_of_t54w_noise_suppression/" target="_blank" rel="noopener">Downside of T54W noise suppression?</a></h3>
+      <p class="card-summary">Has anyone noticed the rather aggressive noise suppression that was apparently added to Yealink T5x firmware in the last year or so? Probably somewhere around the 96.87.0.15 version. It first became evident to us when a school, who used to play the national anthem from a computer speaker into the handset mic, complained that &quot;paging wasn&#x27;t working&quot;. Turns out the Yealink noise filter was taking th…</p>
+      <div class="brand-tags"><span class="brand-tag" style="background:#e8f5e9;color:#2e7d32">Yealink</span></div>
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
@@ -260,15 +269,6 @@
       <p class="card-summary">Looking for a VoIP solution but don&#x27;t know where to start? Ask here! Please not that standalone advertisements are not permitted. All top-level comments must be requests for a product or service. Absolutely no soliciting. Do not ask anyone to DM you, or DM others for any reason. If you want someone to use your services, post a link to your website. This post will be replaced by a new one at 00:00 …</p>
       
     </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-10-30T10:05:22+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1xjbboi/panasonic_pbx_with_linkvil/" target="_blank" rel="noopener">Panasonic PBX with Linkvil</a></h3>
-      <p class="card-summary">We have Panasonic PBX, KX-NS500NE, 12 years old but working fine with latest fw. There are several analog and IP phones (panasonic and fanvil) installed. Now I want to add Fanvil/Linkvil IP Dect, (W710H base station + W620H handsets). But, it seems that NS500 can&#x27;t register those. I can&#x27;t find where the problem could be. For IP trunk needs, local port on NS500 is changed from 5060 to 15060 and I s…</p>
-      
-    </article>
   </main>
 
   <footer>
@@ -316,7 +316,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-11-05 13:41';
+    var originalTime = '2026-11-05 23:00';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
