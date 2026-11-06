@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-11-06 13:25（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-11-06 22:30（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -205,7 +205,16 @@
   </div>
 
   <main class="container">
-    <p class="stats">共聚合 5 条新闻</p>
+    <p class="stats">共聚合 6 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-11-06T19:17:27+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1xplime/from_fullstack_developer_to_voip_systems/" target="_blank" rel="noopener">From Full-Stack Developer to VoIP &amp; Systems Engineering — Am I Moving in the Right Career Direction?</a></h3>
+      <p class="card-summary">Hey everyone! I&#x27;m a software engineer who initially worked in full-stack web development, but my current job at a call center technology company has taken me into a completely different technical domain. Over the past few months, I&#x27;ve been working on and learning about: VoIP &amp; Telephony: Asterisk, SIP, RTP, SIP trunks, carriers, dialers, and predictive dialing. Softswitch Architecture: OpenSIPS, R…</p>
+      
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
@@ -298,7 +307,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-11-06 13:25';
+    var originalTime = '2026-11-06 22:30';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
