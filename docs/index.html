@@ -196,7 +196,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-11-08 03:18（每6小时自动刷新）</p>
+    <p class="subtitle">实时聚合 UC/VoIP 行业权威媒体 · 最后更新：2026-11-08 12:25（每6小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -206,6 +206,15 @@
 
   <main class="container">
     <p class="stats">共聚合 5 条新闻</p>
+    <article class="card">
+      <div class="card-header">
+        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
+        <span class="meta">Reddit r/VOIP · 2026-11-08T06:50:56+00:00</span>
+      </div>
+      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1xqs4eu/access_your_android_phones_sim_calls_remotely/" target="_blank" rel="noopener">Access your Android phone’s SIM calls remotely from a browser — early prototype, looking for feedback</a></h3>
+      <p class="card-summary">Hi everyone, I’m building a project that lets you make and receive calls using the SIM card in your Android phone, remotely through a browser. The phone stays connected to its mobile network, while you handle calls from another location. The calling prototype is working. I’m also considering a mobile app that would act as a softphone, so you could access those calls from another phone. SMS support…</p>
+      
+    </article>
     <article class="card">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
@@ -232,15 +241,6 @@
       <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1xou6hb/downside_of_t54w_noise_suppression/" target="_blank" rel="noopener">Downside of T54W noise suppression?</a></h3>
       <p class="card-summary">Has anyone noticed the rather aggressive noise suppression that was apparently added to Yealink T5x firmware in the last year or so? Probably somewhere around the 96.87.0.15 version. It first became evident to us when a school, who used to play the national anthem from a computer speaker into the handset mic, complained that &quot;paging wasn&#x27;t working&quot;. Turns out the Yealink noise filter was taking th…</p>
       <div class="brand-tags"><span class="brand-tag" style="background:#e8f5e9;color:#2e7d32">Yealink</span></div>
-    </article>
-    <article class="card">
-      <div class="card-header">
-        <span class="badge" style="background:#fce4ec;color:#c62828">社区</span>
-        <span class="meta">Reddit r/VOIP · 2026-11-05T12:08:07+00:00</span>
-      </div>
-      <h3 class="card-title"><a href="https://www.reddit.com/r/VOIP/comments/1xoh0ri/voipms_users_which_android_softphone_has_worked/" target="_blank" rel="noopener">VOIPms users: Which Android softphone has worked best for you?</a></h3>
-      <p class="card-summary">Hello everyone! I’m looking for an Android softphone to use with voipms I’ve seen the voipms softphone, Linphone, and a few others, but I’d like to hear from people who actually use them. submitted by /u/MorePeppers9 [link] [comments]</p>
-      
     </article>
     <article class="card">
       <div class="card-header">
@@ -298,7 +298,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-11-08 03:18';
+    var originalTime = '2026-11-08 12:25';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
